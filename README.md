@@ -2,7 +2,7 @@
 # Predicting death on Stress, Psychotropic Abuse, Violence Scenarios, and Anxiety Settings
 
 ## Intro
-We created this project in the context of the graduate subject Data Science and Visualization for Health (https://ds4h.org/) for the 2022.1 term at Unicamp.
+We created this project in the context of the graduate subject [ Data Science and Visualization for Health ] (https://ds4h.org/) for the 2022.1 term at Unicamp.
 
 |        Name       |       RA      |   Concentration   |
 | ----------------- | ------------- | ----------------- | 
