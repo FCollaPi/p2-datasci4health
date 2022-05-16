@@ -11,6 +11,12 @@ We created this project in the context of the graduate subject [Data Science and
 
 ## Contextualization
 ### Tools
+1. Python
+	- Pandas
+	- Numpy
+	- SQLite3
+2. SQL
+3. Orange
 
 ## Methodology
 ### Used Bases
