@@ -101,7 +101,7 @@ As for the parameters, this is the timeframe in which they took place within our
 | Partner Abuse              |           |           |     •     |
 
 ### 2nd Scenario
-
+> TO-DO
 
 ### Used Bases
 We only used the given bases as follows:
@@ -112,9 +112,22 @@ We only used the given bases as follows:
 No other base of reference was needed, nor were the extended bases provided.
 
 ## Obtained Results
+> TO-DO
 
 ## Expansion
+> TO-DO
 
 ## Discussion
+> TO-DO
 
 ## Reasoning
+> TO-DO
+
+## References
+- https://pubmed.ncbi.nlm.nih.gov/30914444/
+- https://mecp.springeropen.com/articles/10.1186/s43045-021-00157-x
+- https://www.nctsn.org/what-is-child-trauma/trauma-types/intimate-partner-violence
+- https://pubmed.ncbi.nlm.nih.gov/15652265/
+- https://www.apa.org/news/press/releases/2021/10/stress-pandemic-decision-making
+- https://www.apa.org/news/press/releases/2021/10/stress-pandemic-decision-making
+- https://www.mentalhealth.org.uk/a-to-z/s/stress
