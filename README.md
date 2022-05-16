@@ -128,7 +128,7 @@ No other base of reference was needed, nor were the extended bases provided.
 
 ### 2nd Scenario
 > TO-DO
-#### 1Sst Trial
+#### 1st Trial
 > TO-DO
 
 ## Expansion
