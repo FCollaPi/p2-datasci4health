@@ -15,7 +15,7 @@ News and articles on psychotropic-substances abuse as a cause of stress in diffe
 This decision-making process happened concurrently with the data analysis and a debate on what we should be searching. Finally, after available data seemed empirically satisfying, we decided to put together an actual question, so the process of assessing the data could be as tangible as possible.<br><br>
 The question mentioned above panned out as: "What is the death prognostic for patients submitted to depression screenings?".<br><br>
 Data analysis and trials on tests and scores showed unsatisfying results and a weak causal relation between those variables, which led us to evolve the search question to:<br><br>
-"What is the death prognostic to victims of violence in environments and/or intimate partner abuse (also referred to as IPV) who are diagnosed with severe anxiety, stress, major depression disorder and show unhealthy psychotropic substances abuse?".<br><br>
+"What is the death prognostic to victims of violence in environments and/or intimate partner abuse (also referred to as IPV) who are diagnosed with severe anxiety, stress, major depression disorder and show unhealthy psychotropic substances abuse?".
 
 ### Tools
 1. Python
