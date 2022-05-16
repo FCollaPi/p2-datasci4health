@@ -20,6 +20,12 @@ We created this project in the context of the graduate subject [Data Science and
 
 ## Methodology
 ### Used Bases
+We only used the given bases, as it follows:
+
+-   Scenario01
+-   Scenario02
+
+No other base of reference was needed, nor the extended bases provided.
 
 ## Obtained Results
 
