@@ -26,6 +26,14 @@ Data analysis and trials on tests and scores showed unsatisfying results and a w
 3. Orange
 
 ## Methodology
+In the preliminary analysis, we went through all the available tables to understand what kind of data was available. Then, with that in hand, we held a brief discussion to shepherd our decisions moving forward - and we reached a consensus that mental health awareness should serve as a foundation for our analysis.<br><br>
+Since we aimed at a direct relation between the aforementioned parameters, with no socio-economic constraint, we could drop tables containing data with prices, vendors, or anything that could sidetrack us from our goal, such as:
+-   Allergies
+-   Care plans
+-   Claims
+-   Organizations
+-   Etc.
+
 The overall procedure was circular. First, we gathered data, developed a model, and conducted testing - if the results were not satisfactory, we would return to gathering data.<br><br>
 In this context, we used the following parameters:
 -   Severe Anxiety
