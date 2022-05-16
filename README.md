@@ -32,7 +32,7 @@ Data analysis and trials on tests and scores showed unsatisfying results and a w
 3. Orange
 
 ## Methodology
-In the preliminary analysis, we went through all the available tables to understand what kind of data was available. Then, with that in hand, we held a brief discussion to shepherd our decisions moving forward - and we reached a consensus that mental health awareness should serve as a foundation for our analysis.
+We went through all the available tables during the preliminary analysis to understand what kind of data was available. Then, with that in hand, we held a brief discussion to shepherd our decisions moving forward - and we reached a consensus that mental health awareness should serve as a foundation for our analysis.
 
 Since we aimed at a direct relation between the aforementioned parameters, with no socio-economic constraint, we could drop tables containing data with prices, vendors, or anything that could sidetrack us from our goal, such as:
 -   Allergies
@@ -83,7 +83,7 @@ Once we assessed those tables from the depression screening standpoint and reali
 | Medications-Reasons-Counts |            |           |    •      |
 | Medications-Type-Counts    |            |           |    •      |
 
-Due to their strong relationship, we will further explain the reasoning behind each addition and the results obtained after each trial in the "Obtained Results" session.
+We will further explain the reasoning behind each addition alongside the results obtained after each trial due to their strong relationship.
 
 As for the parameters, this is the timeframe in which they took place within our analysis:
 
@@ -104,12 +104,12 @@ As for the parameters, this is the timeframe in which they took place within our
 
 
 ### Used Bases
-We only used the given bases, as it follows:
+We only used the given bases as follows:
 
 -   Scenario01
 -   Scenario02
 
-No other base of reference was needed, nor the extended bases provided.
+No other base of reference was needed, nor were the extended bases provided.
 
 ## Obtained Results
 
