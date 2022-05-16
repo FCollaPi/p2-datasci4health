@@ -28,8 +28,12 @@ Data analysis and trials on tests and scores showed unsatisfying results and a w
 	- Pandas
 	- Numpy
 	- SQLite3
+
 2. SQL
-3. Orange
+3. Jupyter Notebook
+	- on MyBinder
+	- on VSCode
+4. Orange
 
 ## Methodology
 We went through all the available tables during the preliminary analysis to understand what kind of data was available. Then, with that in hand, we held a brief discussion to shepherd our decisions moving forward - and we reached a consensus that mental health awareness should serve as a foundation for our analysis.
