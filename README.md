@@ -50,19 +50,21 @@ In this context, we used the following parameters:
 -   Victim of Intimate Partner Abuse
 
 ### 1st Scenario
+
 For the first scenario, this is the timeframe in which we added them:
-|                           | 1st Trial | 2nd Trial | 3rd Trial | 
-| :-----------------------: | :-------: | :-------: | :-------: |
-| Severe Anxiety            |      •    |           |           |
-| Stress                    |      •    |           |           |
-| Major Depression          |      •    |           |           |
-| Unhealthy Acohol Drinking |           |     •     |           |
-| Opioid Abuse              |           |     •     |           |
-| Drug Overdose             |           |     •     |           |
-| Misuses Drugs             |           |     •     |           |
-| Smokes Tobacco            |           |     •     |           |
-| Reports of Violence       |           |           |     •     |
-| Partner Abuse             |           |           |     •     |
+
+|                            | 1st Trial | 2nd Trial | 3rd Trial | 
+| :------------------------: | :-------: | :-------: | :-------: |
+| Severe Anxiety             |      •    |           |           |
+| Stress                     |      •    |           |           |
+| Major Depression           |      •    |           |           |
+| Unhealthy Alcohol Drinking |           |     •     |           |
+| Opioid Abuse               |           |     •     |           |
+| Drug Overdose              |           |     •     |           |
+| Misuses Drugs              |           |     •     |           |
+| Smokes Tobacco             |           |     •     |           |
+| Reports of Violence        |           |           |     •     |
+| Partner Abuse              |           |           |     •     |
 
 ### Used Bases
 We only used the given bases as follows:
