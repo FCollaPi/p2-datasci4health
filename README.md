@@ -27,7 +27,7 @@ In this context, we used the following parameters:
 -   Misuses Drugs
 -   Smokes Tobacco Daily
 -   Major Depression Disorder
--   
+
 ### Tools
 1. Python
 	- Pandas
