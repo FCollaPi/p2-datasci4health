@@ -117,6 +117,19 @@ No other base of reference was needed, nor were the extended bases provided.
 
 ## Obtained Results
 > TO-DO
+### 1st Scenario
+> TO-DO
+#### 1st Trial
+> TO-DO
+#### 2nd Trial
+> TO-DO
+#### 3rd Trial
+> TO-DO
+
+### 2nd Scenario
+> TO-DO
+#### 1Sst Trial
+> TO-DO
 
 ## Expansion
 > TO-DO
