@@ -50,7 +50,7 @@ In this context, we used the following parameters:
 -   Victim of Intimate Partner Abuse
 
 ### 1st Scenario
-For the first scenario, this is timeframe in which we added them:
+For the first scenario, this is the timeframe in which we added them:
 |                           | 1st Trial | 2nd Trial | 3rd Trial | 
 | :-----------------------: | :-------: | :-------: | :-------: |
 | Severe Anxiety            |      •    |           |           |
