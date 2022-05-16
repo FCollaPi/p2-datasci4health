@@ -16,17 +16,6 @@ This decision-making process happened concurrently with the data analysis and a 
 The question mentioned above panned out as: "What is the death prognostic for patients submitted to depression screenings?".<br><br>
 Data analysis and trials on tests and scores showed unsatisfying results and a weak causal relation between those variables, which led us to evolve the search question to:<br><br>
 "What is the death prognostic to victims of violence in environments and/or intimate partner abuse (also referred to as IPV) who are diagnosed with severe anxiety, stress, major depression disorder and show unhealthy psychotropic substances abuse?".<br><br>
-In this context, we used the following parameters:
--   Severe Anxiety
--   Stress
--   Reports of Violence in the Environment
--   Victim of Intimate Partner Abuse
--   Unhealthy Alcohol Drinking Behavior
--   Opioid Abuse
--   Drug Overdose
--   Misuses Drugs
--   Smokes Tobacco Daily
--   Major Depression Disorder
 
 ### Tools
 1. Python
@@ -37,6 +26,34 @@ In this context, we used the following parameters:
 3. Orange
 
 ## Methodology
+The overall procedure was circular. First, we gathered data, developed a model, and conducted testing - if the results were not satisfactory, we would return to gathering data.<br><br>
+In this context, we used the following parameters:
+-   Severe Anxiety
+-   Stress
+-   Major Depression Disorder
+-  Unhealthy Alcohol Drinking Behavior
+-   Opioid Abuse
+-   Drug Overdose
+-   Misuses Drugs
+-   Smokes Tobacco Daily
+-   Reports of Violence in the Environment
+-   Victim of Intimate Partner Abuse
+
+### 1st Scenario
+For the first scenario, this is timeframe in which we added them:
+|                           | 1st Trial | 2nd Trial | 3rd Trial | 
+| :-----------------------: | :-------: | :-------: | :-------: |
+| Severe Anxiety            |      •    |           |           |
+| Stress                    |      •    |           |           |
+| Major Depression          |      •    |           |           |
+| Unhealthy Acohol Drinking |           |     •     |           |
+| Opioid Abuse              |           |     •     |           |
+| Drug Overdose             |           |     •     |           |
+| Misuses Drugs             |           |     •     |           |
+| Smokes Tobacco            |           |     •     |           |
+| Reports of Violence       |           |           |     •     |
+| Partner Abuse             |           |           |     •     |
+
 ### Used Bases
 We only used the given bases as follows:
 
