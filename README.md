@@ -24,7 +24,7 @@ Data analysis and trials on tests and scores showed unsatisfying results and a w
 
 "What is the death prognostic to victims of violence in environments and/or intimate partner abuse (also referred to as IPV) who are diagnosed with severe anxiety, stress, major depression disorder and show unhealthy psychotropic substances abuse?"
 
-We used the same toolset as the one presented during classes, which consists on:
+We used the same toolset as the one presented during classes, which consisted on:
 ### Tools
 1. Python
 	- Pandas
