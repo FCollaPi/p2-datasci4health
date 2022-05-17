@@ -128,7 +128,9 @@ No other base of reference was needed, nor were the extended bases provided.
 | Tree                 |  1.000  |  1.000  |  1.000  |   1.000   |  1.000  |
 | Neural Network       |  0.574  |  0.873  |  0.830  |   0.889   |  0.873  |
 | Logistic Regression  |  0.500  |  0.850  |  0.782  |   0.723   |  0.850  |
->WILL ADD ROC CURVE HERE
+<img width="700" alt="roc-1st" src="https://user-images.githubusercontent.com/54454569/168852627-a86d9551-e831-4ac7-ad11-0edfab7da5f8.png">
+> TO-DO
+
 
 #### Confusion Matrix
 #####  Tree
@@ -160,10 +162,11 @@ No other base of reference was needed, nor were the extended bases provided.
 | :------------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
 | Neural Network       |  0.953  |  0.970  |  0.969  |   0.970   |  0.970  |
 | Logistic Regression  |  0.956  |  0.940  |  0.939  |   0.940   |  0.940  |
->WILL ADD SCATTER PLOT HERE
+<img width="700" alt="scatter-2" src="https://user-images.githubusercontent.com/54454569/168853560-77a1ae4d-9bd7-4494-8aaf-273af5a22d37.png">
 > TO-DO
 
 #### PCA
+<img width="500" alt="pca-2" src="https://user-images.githubusercontent.com/54454569/168853608-6076296e-cebf-43f3-bdb7-1d566a1a2a33.png">
 >TO-DO
 
 #### Confusion Matrix
@@ -193,6 +196,7 @@ No other base of reference was needed, nor were the extended bases provided.
 > TO-DO
 
 #### PCA
+
 >TO-DO
 
 #### Confusion Matrix
