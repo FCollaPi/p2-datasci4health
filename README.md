@@ -163,7 +163,7 @@ No other base of reference was needed, nor were the extended bases provided.
 | Neural Network       |  0.953  |  0.970  |  0.969  |   0.970   |  0.970  |
 | Logistic Regression  |  0.956  |  0.940  |  0.939  |   0.940   |  0.940  |
 <img width="700" alt="scatter-2" src="https://user-images.githubusercontent.com/54454569/168853560-77a1ae4d-9bd7-4494-8aaf-273af5a22d37.png">
-> TO-DO
+>TO-DO
 
 #### PCA
 <img width="500" alt="pca-2" src="https://user-images.githubusercontent.com/54454569/168853608-6076296e-cebf-43f3-bdb7-1d566a1a2a33.png">
