@@ -1,3 +1,4 @@
+
 # Project 2 - DataSci4Health
 # Predicting Death on Stress, Psychotropic Abuse, Violence Scenarios, and Anxiety Settings
 
@@ -23,6 +24,7 @@ Data analysis and trials on tests and scores showed unsatisfying results and a w
 
 "What is the death prognostic to victims of violence in environments and/or intimate partner abuse (also referred to as IPV) who are diagnosed with severe anxiety, stress, major depression disorder and show unhealthy psychotropic substances abuse?"
 
+We used the same toolset as the one presented during classes, which consists on:
 ### Tools
 1. Python
 	- Pandas
@@ -118,9 +120,35 @@ No other base of reference was needed, nor were the extended bases provided.
 ## Obtained Results
 > TO-DO
 ### 1st Scenario
-> TO-DO
+>TO-DO
+>
 #### 1st Trial
-> TO-DO
+|          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
+| :------------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
+| Tree                 |  1.000  |  1.000  |  1.000  |   1.000   |  1.000  |
+| Neural Network       |  0.574  |  0.873  |  0.830  |   0.889   |  0.873  |
+| Logistic Regression  |  0.500  |  0.850  |  0.782  |   0.723   |  0.850  |
+
+##### Confusion Matrix
+#####  Tree
+|   0  |   0  |   1  |   Σ  |
+| ---: | ---: | ---: | ---: |
+|   0  | 1990 |  0   | 1990 |
+|   1  |  350 |  0   | 350  |
+|   Σ  | 2340 |  0   | 2340 |
+#####  Neural Network
+|   0  |   0  |   1  |   Σ  |
+| ---: | ---: | ---: | ---: |
+|   0  | 1990 |  0   | 1990 |
+|   1  |  298 |  52  | 350  |
+|   Σ  | 2288 |  52  | 2340 |
+#####  Logistic Regression
+|   0  |   0  |   1  |   Σ  |
+| ---: | ---: | ---: | ---: |
+|   0  | 1990 |  0   | 1990 |
+|   1  |    0 |  350 | 350  |
+|   Σ  | 1990 |  350 | 2340 |
+
 #### 2nd Trial
 > TO-DO
 #### 3rd Trial
