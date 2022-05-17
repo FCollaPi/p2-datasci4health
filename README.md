@@ -120,7 +120,7 @@ No other base of reference was needed, nor were the extended bases provided.
 ## Obtained Results
 > TO-DO
 ### 1st Scenario
->TO-DO
+> TO-DO
 
 #### 1st Trial
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
@@ -129,6 +129,7 @@ No other base of reference was needed, nor were the extended bases provided.
 | Neural Network       |  0.574  |  0.873  |  0.830  |   0.889   |  0.873  |
 | Logistic Regression  |  0.500  |  0.850  |  0.782  |   0.723   |  0.850  |
 <img width="700" alt="roc-1st" src="https://user-images.githubusercontent.com/54454569/168852627-a86d9551-e831-4ac7-ad11-0edfab7da5f8.png">
+
 > TO-DO
 
 
@@ -139,7 +140,7 @@ No other base of reference was needed, nor were the extended bases provided.
 |   0  | 1990 |  0   | 1990 |
 |   1  |  350 |  0   | 350  |
 |   Σ  | 2340 |  0   | 2340 |
->TO-DO
+> TO-DO
 
 #####  Neural Network
 |   0  |   0  |   1  |   Σ  |
@@ -147,7 +148,7 @@ No other base of reference was needed, nor were the extended bases provided.
 |   0  | 1990 |  0   | 1990 |
 |   1  |  298 |  52  | 350  |
 |   Σ  | 2288 |  52  | 2340 |
->TO-DO
+> TO-DO
 
 #####  Logistic Regression
 |   0  |   0  |   1  |   Σ  |
@@ -155,7 +156,7 @@ No other base of reference was needed, nor were the extended bases provided.
 |   0  | 1990 |  0   | 1990 |
 |   1  |    0 |  350 | 350  |
 |   Σ  | 1990 |  350 | 2340 |
->TO-DO
+> TO-DO
 
 #### 2nd Trial
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
@@ -163,14 +164,16 @@ No other base of reference was needed, nor were the extended bases provided.
 | Neural Network       |  0.953  |  0.970  |  0.969  |   0.970   |  0.970  |
 | Logistic Regression  |  0.956  |  0.940  |  0.939  |   0.940   |  0.940  |
 <img width="700" alt="scatter-2" src="https://user-images.githubusercontent.com/54454569/168853560-77a1ae4d-9bd7-4494-8aaf-273af5a22d37.png">
->TO-DO
+
+> TO-DO
 
 #### PCA
 <img width="500" alt="pca-2" src="https://user-images.githubusercontent.com/54454569/168853608-6076296e-cebf-43f3-bdb7-1d566a1a2a33.png">
->TO-DO
+
+> TO-DO
 
 #### Confusion Matrix
->TO-DO
+> TO-DO
 
 #####  Logistic Regression
 |   0  |   0  |   1  |   Σ  |
@@ -178,7 +181,7 @@ No other base of reference was needed, nor were the extended bases provided.
 |   0  | 1990 |  0   | 1990 |
 |   1  |    0 |  350 | 350  |
 |   Σ  | 1990 |  350 | 2340 |
->TO-DO
+> TO-DO
 
 #####  Tree
 |   0  |   0   |   1   |    Σ   |
@@ -186,7 +189,7 @@ No other base of reference was needed, nor were the extended bases provided.
 |   0  | 88437 |  1833 | 90270  |
 |   1  | 5271  | 23049 | 28320  |
 |   Σ  | 2340  | 24882 | 118590 |
->TO-DO
+> TO-DO
 
 #### 3rd Trial
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
@@ -196,11 +199,10 @@ No other base of reference was needed, nor were the extended bases provided.
 > TO-DO
 
 #### PCA
-
->TO-DO
+> TO-DO
 
 #### Confusion Matrix
->TO-DO
+> TO-DO
 
 #####  Logistic Regression
 |   0  |    0   |    1   |    Σ   |
@@ -208,7 +210,7 @@ No other base of reference was needed, nor were the extended bases provided.
 |   0  | 87645  |  2616  | 90270  |
 |   1  | 19057  |  9263  | 28320  |
 |   Σ  | 106711 |  11879 | 118590 |
->TO-DO
+> TO-DO
 
 #####  Tree
 |   0  |    0   |    1   |    Σ   |
@@ -216,7 +218,7 @@ No other base of reference was needed, nor were the extended bases provided.
 |   0  | 89434  |   836  | 90270  |
 |   1  | 14961  |  13359 | 28320  |
 |   Σ  | 104395 |  14195 | 118590 |
->TO-DO
+> TO-DO
 
 ### 2nd Scenario
 > TO-DO
