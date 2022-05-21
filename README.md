@@ -3,7 +3,7 @@
 # Predicting Death on Stress, Psychotropic Abuse, Violence Scenarios, and Anxiety Settings
 
 ## Intro
-We developed this project in the context of the graduate subject Data Science and Visualization for Health (https://ds4h.org/) for the 2022.1 term at Unicamp.
+We developed this project in the context of the graduate subject [Data Science and Visualization for Health](https://ds4h.org/) for the 2022.1 term at Unicamp.
 
 |        Name       |       RA      |  Especialization  |
 | :---------------: | ------------- | ----------------- | 
@@ -38,7 +38,7 @@ We used the same toolset as the one presented during classes, which consisted on
 4. Orange
 
 ## Methodology
-We went through all the available tables during the preliminary analysis to understand what kind of data was available. Then, with that in hand, we held a brief discussion to shepherd our decisions moving forward - and we reached a consensus that mental health awareness should serve as a foundation for our analysis.
+We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
 Since we aimed at a direct relation between the aforementioned parameters, with no socio-economic constraint, we could drop tables containing data with prices, vendors, or anything that could sidetrack us from our goal, such as:
 -   Allergies
@@ -47,7 +47,8 @@ Since we aimed at a direct relation between the aforementioned parameters, with 
 -   Organizations
 -   Etc.
 
-The overall procedure was circular. First, we gathered data, developed a model, and conducted testing - if the results were not satisfactory, we would return to gathering data.
+The procedure was circular across-the-board. First, we compiled data, designed a model, and executed testing - if the results were not satisfactory, we would return to assembling data.
+
 In this context, we used the following parameters:
 -   Severe Anxiety
 -   Stress
@@ -60,7 +61,7 @@ In this context, we used the following parameters:
 -   Reports of Violence in the Environment
 -   Victim of Intimate Partner Abuse
 
-We decided to deal with the scenarios incrementally, so we first approached the first scenario and circled the above loop to only deal with the second scenario afterward.
+We decided to deal with the scenarios incrementally. So, we approached the first scenario before moving on to the second, following the established framework.
 
 More on the procedures for each scenario:
 
@@ -74,156 +75,200 @@ Intuitively, on the first run, we created tables from the following relations:
 
 Once we assessed those tables from the depression screening standpoint and realized they were not enough, we added up more, so we ended with the following tables constrained on a timeframe:
 
-|                            |  1st Trial | 2nd Trial | 3rd Trial | 
-| :------------------------: | :--------: | :-------: | :-------: |
-| Patient-Encounter          |   •        |           |           |
-| Patient-Condition          |      •     |           |           |
-| Patient-Drugs              |     •      |           |           |
-| Depressive                 |            |    •      |           |
-| Depression-Death           |            |    •      |           |
-| Death-Conditions           |            |     •     |           |
-| Conditions-Death-Counts    |            |     •     |           |
-| Contidions-Type-Counts     |            |     •     |           |
-| Encounters-Reasons-Counts  |            |           |    •      |
-| Encounters-Type-Counts     |            |           |    •      |
-| Medications-Reasons-Counts |            |           |    •      |
-| Medications-Type-Counts    |            |           |    •      |
+|                            |  Trial 1 | Trial 2 | Trial 3 | 
+| :------------------------: | :------: | :-----: | :-----: |
+| Patient-Encounter          |     •    |         |         |
+| Patient-Condition          |     •    |         |         |
+| Patient-Drugs              |     •    |         |         |
+| Depressive                 |          |     •   |         |
+| Depression-Death           |          |     •   |         |
+| Death-Conditions           |          |     •   |         |
+| Conditions-Death-Counts    |          |     •   |         |
+| Contidions-Type-Counts     |          |     •   |         |
+| Encounters-Reasons-Counts  |          |         |    •    |
+| Encounters-Type-Counts     |          |         |    •    |
+| Medications-Reasons-Counts |          |         |    •    |
+| Medications-Type-Counts    |          |         |    •    |
 
-We will further explain the reasoning behind each addition alongside the results obtained after each trial due to their strong relationship.
+We will further explain the reasoning behind each addition alongside the results acquired after each trial due to their strong relationship.
 
 As for the parameters, this is the timeframe in which they took place within our analysis:
 
-|                            | 1st Trial | 2nd Trial | 3rd Trial | 
-| :------------------------: | :-------: | :-------: | :-------: |
-| Severe Anxiety             |      •    |           |           |
-| Stress                     |      •    |           |           |
-| Major Depression           |      •    |           |           |
-| Unhealthy Alcohol Drinking |           |     •     |           |
-| Opioid Abuse               |           |     •     |           |
-| Drug Overdose              |           |     •     |           |
-| Misuses Drugs              |           |     •     |           |
-| Smokes Tobacco             |           |     •     |           |
-| Reports of Violence        |           |           |     •     |
-| Partner Abuse              |           |           |     •     |
+|                            |  Trial 1 | Trial 2 | Trial 3 | 
+| :------------------------: | :------: | :-----: | :-----: |
+| Severe Anxiety             |     •    |         |         |
+| Stress                     |     •    |         |         |
+| Major Depression           |     •    |         |         |
+| Unhealthy Alcohol Drinking |          |     •   |         |
+| Opioid Abuse               |          |     •   |         |
+| Drug Overdose              |          |     •   |         |
+| Misuses Drugs              |          |     •   |         |
+| Smokes Tobacco             |          |     •   |         |
+| Reports of Violence        |          |         |     •   |
+| Partner Abuse              |          |         |     •   |
 
 ### 2nd Scenario
 > TO-DO
 
 ### Used Bases
-We only used the given bases as follows:
+We exclusively used the given bases as follows:
 
 -   Scenario01
 -   Scenario02
 
-No other base of reference was needed, nor were the extended bases provided.
+No other base of reference was required, nor were the extended bases provided.
 
 ## Obtained Results
 > TO-DO
 ### 1st Scenario
-> TO-DO
+>TO-DO
 
-#### 1st Trial
+#### Trial 1
+input: depressive.csv
+>TO-DO
+
+#### Targeting Death
+>TO-DO
+
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
 | :------------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
 | Tree                 |  1.000  |  1.000  |  1.000  |   1.000   |  1.000  |
 | Neural Network       |  0.574  |  0.873  |  0.830  |   0.889   |  0.873  |
 | Logistic Regression  |  0.500  |  0.850  |  0.782  |   0.723   |  0.850  |
-<img width="700" alt="roc-1st" src="https://user-images.githubusercontent.com/54454569/168852627-a86d9551-e831-4ac7-ad11-0edfab7da5f8.png">
 
-> TO-DO
+![](https://i.imgur.com/t2vOswY.png)
+>TO-DO
 
 
-#### Confusion Matrix
-#####  Tree
+##### Confusion Matrix
+######  Tree
 |   0  |   0  |   1  |   Σ  |
 | ---: | ---: | ---: | ---: |
 |   0  | 1990 |  0   | 1990 |
 |   1  |  350 |  0   | 350  |
 |   Σ  | 2340 |  0   | 2340 |
-> TO-DO
+>TO-DO
 
-#####  Neural Network
+######  Neural Network
 |   0  |   0  |   1  |   Σ  |
 | ---: | ---: | ---: | ---: |
 |   0  | 1990 |  0   | 1990 |
 |   1  |  298 |  52  | 350  |
 |   Σ  | 2288 |  52  | 2340 |
-> TO-DO
+>TO-DO
 
-#####  Logistic Regression
+######  Logistic Regression
 |   0  |   0  |   1  |   Σ  |
 | ---: | ---: | ---: | ---: |
 |   0  | 1990 |  0   | 1990 |
 |   1  |    0 |  350 | 350  |
 |   Σ  | 1990 |  350 | 2340 |
-> TO-DO
+>TO-DO
 
-#### 2nd Trial
+#### Targeting Prognostic
+>TO-DO
+
+|          Model       |          MSE           |      RMSE     |      MAE      |   R2  |
+| :------------------: | :--------------------: | :-----------: | :-----------: | :---: |
+| Linear Regression    | 343035556174557248.000 | 585692373.328 | 334186392.087 | 0.192 |
+
+
+#### Trial 2
+input: Patient-Drugs.csv
+>TO-DO
+
+#### Targeting Death
+>TO-DO
+
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
 | :------------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
 | Neural Network       |  0.953  |  0.970  |  0.969  |   0.970   |  0.970  |
 | Logistic Regression  |  0.956  |  0.940  |  0.939  |   0.940   |  0.940  |
-<img width="700" alt="scatter-2" src="https://user-images.githubusercontent.com/54454569/168853560-77a1ae4d-9bd7-4494-8aaf-273af5a22d37.png">
+
+![](https://i.imgur.com/mmy7O3L.jpg)
 
 > TO-DO
 
-#### PCA
-<img width="500" alt="pca-2" src="https://user-images.githubusercontent.com/54454569/168853608-6076296e-cebf-43f3-bdb7-1d566a1a2a33.png">
+##### PCA
+![](https://i.imgur.com/Kzc8zNW.png)
 
-> TO-DO
+>TO-DO
 
-#### Confusion Matrix
-> TO-DO
+##### Confusion Matrix
+>TO-DO
 
-#####  Logistic Regression
+######  Logistic Regression
 |   0  |   0  |   1  |   Σ  |
 | ---: | ---: | ---: | ---: |
 |   0  | 1990 |  0   | 1990 |
 |   1  |    0 |  350 | 350  |
 |   Σ  | 1990 |  350 | 2340 |
-> TO-DO
+>TO-DO
 
-#####  Tree
+######  Tree
 |   0  |   0   |   1   |    Σ   |
 | ---: | ----: | ----: | -----: |
 |   0  | 88437 |  1833 | 90270  |
 |   1  | 5271  | 23049 | 28320  |
 |   Σ  | 2340  | 24882 | 118590 |
-> TO-DO
+>TO-DO
 
-#### 3rd Trial
+#### Targeting Prognostic
+
+#### Trial 3
+input: Patient-Drugs.csv
+>TO-DO
+
+#### Targeting Death
+>TO-DO
+
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
 | :------------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
 | Neural Network       |  0.860  |  0.867  |  0.849  |   0.877   |  0.867  |
 | Logistic Regression  |  0.667  |  0.817  |  0.787  |   0.811   |  0.817  |
+
+![](https://i.imgur.com/SLW5LFw.png)
+
 > TO-DO
 
 #### PCA
-> TO-DO
+![](https://i.imgur.com/fmgeLiY.png)
 
-#### Confusion Matrix
-> TO-DO
+>TO-DO
 
-#####  Logistic Regression
+##### Confusion Matrix
+>TO-DO
+
+######  Logistic Regression
 |   0  |    0   |    1   |    Σ   |
 | ---: | -----: | -----: | -----: |
 |   0  | 87645  |  2616  | 90270  |
 |   1  | 19057  |  9263  | 28320  |
 |   Σ  | 106711 |  11879 | 118590 |
-> TO-DO
+>TO-DO
 
-#####  Tree
+######  Tree
 |   0  |    0   |    1   |    Σ   |
 | ---: | -----: | -----: | -----: |
 |   0  | 89434  |   836  | 90270  |
 |   1  | 14961  |  13359 | 28320  |
 |   Σ  | 104395 |  14195 | 118590 |
-> TO-DO
+>TO-DO
+
+#### Targeting Prognostic
+|          Model       |     MSE     |    RMSE  |   MAE    |  R2   |
+| :------------------: | :---------: | :------: | :------: | :---: |
+| Regression Tree      | 7936089.717 | 2817.107 | 1268.487 | 0.175 |
+| Linear Regression    | 9273105.390 | 3045.177 | 1514.036 | 0.037 |
+
+>TO-DO
 
 ### 2nd Scenario
 > TO-DO
-#### 1st Trial
+#### Trial 1
 > TO-DO
+
+
 
 ## Expansion
 > TO-DO
