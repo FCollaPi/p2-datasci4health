@@ -34,12 +34,10 @@ We used the same toolset as the one presented during classes, which consisted on
 2. SQL
 3. Jupyter Notebook
 	- on MyBinder
-	- on Visual Studio Code
+	- on VSCode
 4. Orange
 
 ## Methodology
-The data used in this project was provided by the professors and is avalaible at [DataSci4Health at Github](https://github.com/datasci4health/home). Such data was extracted from [Synthea](https://synthea.mitre.org), which is a synthetic health data generator. The tables provided at the DataSci4Health page is divided into four different scenarios, from which two were used in this analysis.
-
 We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
 Since we aimed at a direct relation between the aforementioned parameters, with no socio-economic constraint, we could drop tables containing data with prices, vendors, or anything that could sidetrack us from our goal, such as:
@@ -51,7 +49,7 @@ Since we aimed at a direct relation between the aforementioned parameters, with 
 
 The procedure was circular across-the-board. First, we compiled data, designed a model, and executed testing - if the results were not satisfactory, we would return to assembling data.
 
-In this context, we used the following parameters, as labeled in the Conditions table:
+In this context, we used the following parameters:
 -   Severe Anxiety
 -   Stress
 -   Major Depression Disorder
@@ -139,7 +137,6 @@ For this first trial, we used the following parameters:
 - Stress
 - Major Depression
 
-
 The results proved the data were not promising, which made us add more symptoms to strive for better success since the `Area Under Curve` was barely the same as a coin toss.
 
 Due to the lack of a significant `Area Under Curve`, we opted not to deepen our analysis on this trial. Nevertheless, we gathered all results.
@@ -164,7 +161,7 @@ The following ROC Curve (we are aware that this is not an actual curve) is not g
 ##### Confusion Matrix
 The `Confusion Matrix` results also clearly converged to a mistake in some settings chosen thus far.
 
-In a similar fashion, the total absence of False Positives for all the matrixes in the first trial was alone a motive to raise suspicion.
+In a similar fashion, the total absence of `False Positives` for all the matrixes in the first trial was alone a motive to raise suspicion.
 
 ######  Tree
 |   0  |   0  |   1  |   Σ  |
@@ -188,7 +185,7 @@ In a similar fashion, the total absence of False Positives for all the matrixes 
 |   Σ  | 1990 |  350 | 2340 |
 
 #### Regression Model
-At this point we were already convinced the model was a total failure, and the R2 results for the `Linear Regression` did not led us otherwise.
+At this point, we were already convinced the model was a total failure, and the R2 results for the `Linear Regression` did not led us otherwise.
 
 |          Model       |          MSE           |      RMSE     |      MAE      |   R2  |
 | :------------------: | :--------------------: | :-----------: | :-----------: | :---: |
@@ -207,10 +204,13 @@ The variables added for analysis were:
 - Misuses Drugs
 - Smokes Tobacco
 
+
 Halfway through the modeling, during discussions, we felt the urge to add a few more variables (more on this later). However, we had much better results right out of the bat for the time being.
 
 #### Classification Model
 The PCA was a new addition to the analysis, which we had not included in the previous trial. In addition, the setup of the PCA required extra literature reading since we were not super confident about the relation between the number of components and the explained variance.
+
+Besides that, correcting the fault mentioned above (of not targeting the correct variable) enhanced the results immensely.
 
 ##### PCA
 Literature did not recommend a manual selection of the number of components. Instead, picking an `Explained Variance` between 95-99% was the preferred way of setting up the PCA across the board.
