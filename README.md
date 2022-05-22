@@ -34,10 +34,12 @@ We used the same toolset as the one presented during classes, which consisted on
 2. SQL
 3. Jupyter Notebook
 	- on MyBinder
-	- on VSCode
+	- on Visual Studio Code
 4. Orange
 
 ## Methodology
+The data used in this project was provided by the professors and is avalaible at [DataSci4Health at Github](https://github.com/datasci4health/home). Such data was extracted from [Synthea](https://synthea.mitre.org), which is a synthetic health data generator. The tables provided at the DataSci4Health page is divided into four different scenarios, from which two were used in this analysis.
+
 We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
 Since we aimed at a direct relation between the aforementioned parameters, with no socio-economic constraint, we could drop tables containing data with prices, vendors, or anything that could sidetrack us from our goal, such as:
@@ -49,7 +51,7 @@ Since we aimed at a direct relation between the aforementioned parameters, with 
 
 The procedure was circular across-the-board. First, we compiled data, designed a model, and executed testing - if the results were not satisfactory, we would return to assembling data.
 
-In this context, we used the following parameters:
+In this context, we used the following parameters, as labeled in the Conditions table:
 -   Severe Anxiety
 -   Stress
 -   Major Depression Disorder
@@ -152,7 +154,9 @@ Due to the lack of a significant `Area Under Curve`, we opted not to deepen our 
 
 The tree results were not feasible and made us realize we used the dead status as one of the analyzed variables instead of targeting it.
 
-We also decided to drop the `Tree Model` moving forward.
+We also decided to drop the `Neural Network` moving forward due to the time required to obtain results.
+
+The following ROC Curve (we are aware that this is not an actual curve) is not good. At all.
 
 ![](https://i.imgur.com/t2vOswY.png)
 
@@ -193,21 +197,40 @@ At this point we were already convinced the model was a total failure, and the R
 
 #### Trial 2
 `input: Patient-Drugs.csv`
->TO-DO
+
+With the previous experience in hand, we decided to add more variables so we could search for more complex interactions. The model developed for this scenario also needed to be more complex in the sense of robustness.
+
+The variables added for analysis were:
+- Unhealthy Alcohol Drinking
+- Opioid Abuse
+- Drug Overdose
+- Misuses Drugs
+- Smokes Tobacco
+
+Halfway through the modeling, during discussions, we felt the urge to add a few more variables (more on this later). However, we had much better results right out of the bat for the time being.
 
 #### Classification Model
->TO-DO
+The PCA was a new addition to the analysis, which we had not included in the previous trial. In addition, the setup of the PCA required extra literature reading since we were not super confident about the relation between the number of components and the explained variance.
 
 ##### PCA
+Literature did not recommend a manual selection of the number of components. Instead, picking an `Explained Variance` between 95-99% was the preferred way of setting up the PCA across the board.
+
+We opted for 98% of `Explained Variance`, which resulted in 9 components that we will further analyze and refer to as analysis inputs.
+
 ![](https://i.imgur.com/Kzc8zNW.png)
+
+Despite the results being remarkably good, we again felt this might have been a confirmation bias, which served as the rationale for the third trial to this first scenario.
+
+Nonetheless, we did a detailed results analysis to evolve the model better.
 
 |         Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
 | :-----------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
 | Tree                |  0.953  |  0.970  |  0.969  |   0.970   |  0.970  |
 | Logistic Regression |  0.956  |  0.940  |  0.939  |   0.940   |  0.940  |
 
->TO-DO
+Even though this might have been the optimal model, we were not feeling confident due to the behemoth jump between the first and second attempts.
 
+Going from 50/50 chances to a 95% did not sound plausible, even though the `ROC Curve` is now actually a curve.
 
 ![](https://i.imgur.com/ZclLh3u.png)
 
