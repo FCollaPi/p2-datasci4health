@@ -37,7 +37,7 @@ We used the same toolset as the one presented during classes, which consisted on
 4. Orange
 
 ## Methodology
-Professors provided the data used in this project through [DataSci4Health on GitHub](https://github.com/datasci4health/home). In addition, such data was extracted from [Synthea](https://synthea.mitre.org), a synthetic health data generator. The tables provided on the DataSci4Health page are divided into four different scenarios, of which two were used in this analysis.
+Professors provided the data used in this project through [DataSci4Health on GitHub](https://github.com/datasci4health/home) in 4 different scenarios, two of each we ended up using in this analysis. In addition, we extracted data from [Synthea](https://synthea.mitre.org), a synthetic health data generator.
 
 We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
@@ -77,14 +77,9 @@ We have been gathering results since the modeling part of the proposed problem. 
 
 We had a `classification model` for assessing data related to death status (where 0 is for alive and 1 for dead) and a `regression model` targeting prognostics to evaluate how long it would take for a patient in the given scenario to die.
 
-Since the development process evolved, we will discuss the changes over time for each trial:
-
-### 1st Scenario
 As previously stated, we wanted to tackle mental health issues and their relation to death. However, mental health thinned down to Depression Screening relatively soon since the available data was not granular enough.
 
-This scenario was also our first approach. However, unfortunately, we had to drop this attempt due to the lack of statistical relevance.
-
-We added more interest variables and the `Principal Component Analysis` to enhance the likelihood of assembling a more robust model from the second trial on.
+However, unfortunately, we had to drop this attempt due to the lack of statistical relevance. We then added more interest variables and the `Principal Component Analysis` to enhance the likelihood of assembling a more robust model.
 
 On Jupyter, we iterated through the available CSVs using SQL queries to understand the tendencies and create other tables that we could export and use on Orange, as recommended by the professors.
 
@@ -127,6 +122,9 @@ As for the parameters, this is the timeframe in which they took place within our
 | Reports of Violence        |          |         |     •   |
 | Partner Abuse              |          |         |     •   |
 
+### Trials
+As subjectively stated, we ran three trials using the first scenario before moving on with the model. In this section, we will report the trials and then present the results.
+
 #### Trial 1
 `input: depressive.csv`
 
@@ -154,7 +152,6 @@ We also decided to drop the `Neural Network` moving forward due to the time requ
 The following ROC Curve (we are aware that this is not an actual curve) is not good. At all.
 
 <img width="650" alt="roc-1st" src="https://user-images.githubusercontent.com/54454569/169718522-1c2b6be3-6de4-4527-9a10-03c9bfadfe1b.png">
-
 
 ##### Confusion Matrix
 The `Confusion Matrix` results also clearly converged to a mistake in some settings chosen thus far.
@@ -189,7 +186,6 @@ At this point, we were already convinced the model was a total failure, and the 
 | :------------------: | :--------------------: | :-----------: | :-----------: | :---: |
 | Linear Regression    | 343035556174557248.000 | 585692373.328 | 334186392.087 | 0.192 |
 
-
 #### Trial 2
 `input: Patient-Drugs.csv`
 
@@ -204,9 +200,6 @@ The variables added for analysis were:
 
 Halfway through the modeling, during discussions, we felt the urge to add a few more variables (more on this later). However, we had much better results right out of the bat for the time being.
 
-
-Halfway through the modeling, during discussions, we felt the urge to add a few more variables (more on this later). However, we had much better results right out of the bat for the time being.
-
 #### Classification Model
 The PCA was a new addition to the analysis, which we had not included in the previous trial. In addition, the setup of the PCA required extra literature reading since we were not super confident about the relation between the number of components and the explained variance.
 
@@ -218,7 +211,6 @@ Literature did not recommend a manual selection of the number of components. Ins
 For this trial, we had to settle for 94% of explained variance to achieve the number of 9 components. Anything equal and beyond 95% would increase the number of components to 10, which did not sound right.
 
 <img width="650" alt="pca-2" src="https://user-images.githubusercontent.com/54454569/169718528-17e63118-ceb7-4d8f-9379-0d32e5d435b2.png">
-
 
 Despite the results being remarkably good, we again felt this might have been a confirmation bias, which served as the rationale for the third trial to this first scenario.
 
@@ -316,20 +308,31 @@ So we decided to stick to it since the process that led us here was enriching it
 | Regression Tree      | 7936089.717 | 2817.107 | 1268.487 | 0.175 |
 | Linear Regression    | 9273105.390 | 3045.177 | 1514.036 | 0.037 |
 
+In order to deeply understand how the small R2 influenced our model, we decided to compare the best and worst-performing components against each other:
+
 ##### Best-Performing Component
+<img width="1000" alt="bcs" src="https://user-images.githubusercontent.com/54454569/169719312-205eddec-8dc2-4e69-998f-41ea1c3f698a.png">
 
 
 ##### Worst-Performing Component
+<img width="1000" alt="wcs" src="https://user-images.githubusercontent.com/54454569/169719327-907f0b89-1226-4d87-8733-d11ed5b06f7d.png">
 
+As shown, the variation between the best-performer and worst-performer is little to none, and we were not able to find a correlation between those components and the target, which was prognostic of death.
 
-### 2nd Scenario
+The results, albeit unsatisfying, elicited a very complex decision-making process involving constant back-and-forth.
+
+### Results
+
+#### 1st Scenario
+>TO-DO
+
+#### 2nd Scenario
 > TO-DO
-
 
 ## Discussion
 > TO-DO
 
-## Wrap-Up
+## Conclusion
 > TO-DO
 
 ## References
