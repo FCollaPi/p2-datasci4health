@@ -158,6 +158,10 @@ We also decided to drop the `Tree Model` moving forward.
 
 
 ##### Confusion Matrix
+The `Confusion Matrix` results also clearly converged to a mistake in some settings chosen thus far.
+
+In a similar fashion, the total absence of `False Positives` for all the matrixes in the first trial was alone a motive to raise suspicion.
+
 ######  Tree
 |   0  |   0  |   1  |   Σ  |
 | ---: | ---: | ---: | ---: |
@@ -180,6 +184,7 @@ We also decided to drop the `Tree Model` moving forward.
 |   Σ  | 1990 |  350 | 2340 |
 
 #### Regression Model
+At this point we were already convinced the model was a total failure, and the R2 results for the `Linear Regression` did not led us otherwise.
 
 |          Model       |          MSE           |      RMSE     |      MAE      |   R2  |
 | :------------------: | :--------------------: | :-----------: | :-----------: | :---: |
@@ -202,6 +207,7 @@ We also decided to drop the `Tree Model` moving forward.
 | Logistic Regression |  0.956  |  0.940  |  0.939  |   0.940   |  0.940  |
 
 >TO-DO
+
 
 ![](https://i.imgur.com/ZclLh3u.png)
 
