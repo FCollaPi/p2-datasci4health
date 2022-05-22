@@ -330,10 +330,20 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 > TO-DO
 
 ## Discussion
-> TO-DO
+As promising as the model looked, we cannot make any further assumptions about its results.
+
+Reasons could go from the sample size to the technical decision-making limitations regarding this domain. We found that intuitiveness does not always lead us to the right places when making sense of large chunks of data.
+
+>TODO
 
 ## Conclusion
-> TO-DO
+Although intense, this project allowed us to "go out on the wild" without leaving, quote-on-quote, the comfort of our fancy barn.
+
+Making assumptions, taking risks of having to redo work, and making decisions are constantly enriching. We could align subjectiveness and technicity.
+
+We also learned new concepts while revisiting subjects. Orange, markdown, and understanding the minutia of data analysis are the three more significant lessons we could list.
+
+If time or concurrent workload were not such strong constraints, we could have visited the medical literature more often to find strong relations between subjects of our interest.
 
 ## References
 - https://pubmed.ncbi.nlm.nih.gov/30914444/
