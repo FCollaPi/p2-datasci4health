@@ -123,7 +123,7 @@ As for the parameters, this is the timeframe in which they took place within our
 | Partner Abuse              |          |         |     •   |
 
 ### Trials
-As subjectively stated, we ran three trials using the first scenario before moving on with the model. In this section, we will report the trials and then present the results.
+This section will report the trials and then present the results.
 
 #### Trial 1
 `input: depressive.csv`
@@ -317,7 +317,7 @@ In order to deeply understand how the small R2 influenced our model, we decided 
 ##### Worst-Performing Component
 <img width="1000" alt="wcs" src="https://user-images.githubusercontent.com/54454569/169719327-907f0b89-1226-4d87-8733-d11ed5b06f7d.png">
 
-As shown, the variation between the best-performer and worst-performer is little to none, and we were not able to find a correlation between those components and the target, which was prognostic of death.
+As shown, the variation between the best-performer and worst-performer is slight to none, and we were not able to find a correlation between those components and the target, which was prognostic of death.
 
 The results, albeit unsatisfying, elicited a very complex decision-making process involving constant back-and-forth.
 
