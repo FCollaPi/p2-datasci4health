@@ -30,15 +30,14 @@ We used the same toolset as the one presented during classes, which consisted on
 	- Pandas
 	- Numpy
 	- SQLite3
-
 2. SQL
 3. Jupyter Notebook
 	- on MyBinder
-	- on VSCode
+	- on Visual Studio Code
 4. Orange
 
 ## Methodology
-Professors provided the data used in this project through [DataSci4Health on Github](https://github.com/datasci4health/home). In addition, such data was extracted from [Synthea](https://synthea.mitre.org), a synthetic health data generator. The tables provided on the DataSci4Health page are divided into four different scenarios, of which two were used in this analysis.
+Professors provided the data used in this project through [DataSci4Health on GitHub](https://github.com/datasci4health/home). In addition, such data was extracted from [Synthea](https://synthea.mitre.org), a synthetic health data generator. The tables provided on the DataSci4Health page are divided into four different scenarios, of which two were used in this analysis.
 
 We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
@@ -63,10 +62,7 @@ In this context, we used the following parameters, as labeled in the Conditions 
 -   Reports of Violence in the Environment
 -   Victim of Intimate Partner Abuse
 
-We decided to deal with the scenarios incrementally. So, we approached the first scenario before moving on to the second, following the established framework.
-
-### 2nd Scenario
-> TO-DO
+We built our models using data from the first scenario and then moved on to the second scenario after gathering enough tangible results.
 
 ### Used Bases
 We exclusively used the given bases as follows:
@@ -84,7 +80,7 @@ We had a `classification model` for assessing data related to death status (wher
 Since the development process evolved, we will discuss the changes over time for each trial:
 
 ### 1st Scenario
-As previously stated, the first scenario tackled mental health issues and their relation to death. However, mental health thinned down to Depression Screening relatively soon since the available data was not granular enough.
+As previously stated, we wanted to tackle mental health issues and their relation to death. However, mental health thinned down to Depression Screening relatively soon since the available data was not granular enough.
 
 This scenario was also our first approach. However, unfortunately, we had to drop this attempt due to the lack of statistical relevance.
 
@@ -163,7 +159,7 @@ The following ROC Curve (we are aware that this is not an actual curve) is not g
 ##### Confusion Matrix
 The `Confusion Matrix` results also clearly converged to a mistake in some settings chosen thus far.
 
-In a similar fashion, the total absence of `False Positives` for all the matrixes in the first trial was alone a motive to raise suspicion.
+In a similar fashion, the total absence of false positives for all the matrixes in the first trial was alone a motive to raise suspicion.
 
 ######  Tree
 |   0  |   0  |   1  |   Σ  |
@@ -219,7 +215,7 @@ Besides that, correcting the fault mentioned above (of not targeting the correct
 ##### PCA
 Literature did not recommend a manual selection of the number of components. Instead, picking an `Explained Variance` between 95-99% was the preferred way of setting up the PCA across the board.
 
-We opted for 98% of `Explained Variance`, which resulted in 9 components that we will further analyze and refer to as analysis inputs.
+For this trial, we had to settle for 94% of explained variance to achieve the number of 9 components. Anything equal and beyond 95% would increase the number of components to 10, which did not sound right.
 
 ![](https://i.imgur.com/Kzc8zNW.png)
 
@@ -238,9 +234,12 @@ Going from 50/50 chances to a 95% did not sound plausible, even though the `ROC 
 
 ![](https://i.imgur.com/ZclLh3u.png)
 
+Reassessing the model made us realize that all those positive results came from the `prognostic` being among the features and not set as a target.
+
+Afterward, the debate inclined us to laugh at ourselves and add other plausible variables to this domain, not in this particular order. So from this point on, all analysis was solemnly to gather more metadata to improve the subsequent trial.
 
 ##### Confusion Matrix
->TO-DO
+Since all data was tainted with wrong inputs, additional analysis of the Matrixes would not be valuable in any shape or form.
 
 ######  Tree
 |   0  |   0   |   1   |    Σ   |
@@ -248,7 +247,6 @@ Going from 50/50 chances to a 95% did not sound plausible, even though the `ROC 
 |   0  | 89710 |  560  | 90270  |
 |   1  | 3034  | 25286 | 28320  |
 |   Σ  | 92744 | 25846 | 118590 |
->TO-DO
 
 ######  Logistic Regression
 |   0  |   0   |   1   |    Σ   |
@@ -256,64 +254,76 @@ Going from 50/50 chances to a 95% did not sound plausible, even though the `ROC 
 |   0  | 88437 |  1833 | 90270  |
 |   1  | 5271  | 23049 | 28320  |
 |   Σ  | 93708 | 24882 | 118590 |
->TO-DO
 
 #### Regression Model
->TO-DO
+The following `Scatter Plot` is a soul representation of how mistakes can taint an evaluation:
 
 ![](https://i.imgur.com/mmy7O3L.jpg)
 
+If it were not for our suspicion, we could have assumed this model was an evident success. Being aware of the statistical behaviors and second guess results when they seemed too promising led us to the third and final trial.
+
 #### Trial 3
 input: Patient-Drugs.csv
->TO-DO
+
+Following the same principles as in the previous trials, we added the following variables:
+- Reports of Violence
+- Partner Abuse
+
+After settling for these variables, we held no further debate to improve the model.
 
 #### Classification Model
->TO-DO
+This model underperformed when compared to the previous. Nonetheless, the results were good enough to proceed with the trial.
 
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
 | :------------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
-| Neural Network       |  0.860  |  0.867  |  0.849  |   0.877   |  0.867  |
+| Decision Tree        |  0.860  |  0.867  |  0.849  |   0.877   |  0.867  |
 | Logistic Regression  |  0.667  |  0.817  |  0.787  |   0.811   |  0.817  |
+
+The Neural Network's ROC Curve delivered us from the fear of not achieving a satisfactory statistical foundation while being feasible within parameters discussed with our peers.
 
 ![](https://i.imgur.com/SLW5LFw.png)
 
-> TO-DO
 
 #### PCA
+We opted for 98% of `Explained Variance`, which resulted in 9 components that we will further analyze and refer to as analysis inputs.
+
 ![](https://i.imgur.com/fmgeLiY.png)
 
->TO-DO
 
 ##### Confusion Matrix
->TO-DO
+Even though the confusion matrixes were far from excellent, they showed precision good enough to move on with this model without significant compromise.
 
-######  Regression Model
+######  Logistic Regression
 |   0  |    0   |    1   |    Σ   |
 | ---: | -----: | -----: | -----: |
 |   0  | 87645  |  2616  | 90270  |
 |   1  | 19057  |  9263  | 28320  |
 |   Σ  | 106711 |  11879 | 118590 |
->TO-DO
 
-######  Tree
+######  Decision Tree
 |   0  |    0   |    1   |    Σ   |
 | ---: | -----: | -----: | -----: |
 |   0  | 89434  |   836  | 90270  |
 |   1  | 14961  |  13359 | 28320  |
 |   Σ  | 104395 |  14195 | 118590 |
->TO-DO
 
-#### Targeting Prognostic
+#### Regression Model
+The R2 results made us shiver, but debates with our peers showed commonality in finding it hard to achieve a model that could tick all the checkboxes in quality.
+
+So we decided to stick to it since the process that led us here was enriching itself.
+
 |          Model       |     MSE     |    RMSE  |   MAE    |  R2   |
 | :------------------: | :---------: | :------: | :------: | :---: |
 | Regression Tree      | 7936089.717 | 2817.107 | 1268.487 | 0.175 |
 | Linear Regression    | 9273105.390 | 3045.177 | 1514.036 | 0.037 |
 
->TO-DO
+##### Best-Performing Component
+
+
+##### Worst-Performing Component
+
 
 ### 2nd Scenario
-> TO-DO
-#### Trial 1
 > TO-DO
 
 
