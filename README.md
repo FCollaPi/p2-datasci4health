@@ -38,6 +38,8 @@ We used the same toolset as the one presented during classes, which consisted on
 4. Orange
 
 ## Methodology
+The data used in this project was provided by the professors and is avalaible at [DataSci4Health at Github](https://github.com/datasci4health/home). Such data was extracted from [Synthea](https://synthea.mitre.org), which is a synthetic health data generator. The tables provided at the DataSci4Health page is divided into four different scenarios, from which two were used in this analysis.
+
 We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
 Since we aimed at a direct relation between the aforementioned parameters, with no socio-economic constraint, we could drop tables containing data with prices, vendors, or anything that could sidetrack us from our goal, such as:
@@ -49,7 +51,7 @@ Since we aimed at a direct relation between the aforementioned parameters, with 
 
 The procedure was circular across-the-board. First, we compiled data, designed a model, and executed testing - if the results were not satisfactory, we would return to assembling data.
 
-In this context, we used the following parameters:
+In this context, we used the following parameters, as labeled in the Conditions table::
 -   Severe Anxiety
 -   Stress
 -   Major Depression Disorder
@@ -203,6 +205,8 @@ The variables added for analysis were:
 - Drug Overdose
 - Misuses Drugs
 - Smokes Tobacco
+
+Halfway through the modeling, during discussions, we felt the urge to add a few more variables (more on this later). However, we had much better results right out of the bat for the time being.
 
 
 Halfway through the modeling, during discussions, we felt the urge to add a few more variables (more on this later). However, we had much better results right out of the bat for the time being.
