@@ -160,7 +160,7 @@ We also decided to drop the `Tree Model` moving forward.
 ##### Confusion Matrix
 The `Confusion Matrix` results also clearly converged to a mistake in some settings chosen thus far.
 
-In a similar fashion, the total absence of `False Positives` for all the matrixes in the first trial was alone a motive to raise suspicion.
+In a similar fashion, the total absence of False Positives for all the matrixes in the first trial was alone a motive to raise suspicion.
 
 ######  Tree
 |   0  |   0  |   1  |   Σ  |
