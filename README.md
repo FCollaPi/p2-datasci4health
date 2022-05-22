@@ -324,10 +324,10 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 ### Results
 
 #### 1st Scenario
->TO-DO
+>TODO
 
 #### 2nd Scenario
-> TO-DO
+> TODO
 
 ## Discussion
 As promising as the model looked, we cannot make any further assumptions about its results.
