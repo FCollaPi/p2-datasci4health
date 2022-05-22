@@ -38,7 +38,7 @@ We used the same toolset as the one presented during classes, which consisted on
 4. Orange
 
 ## Methodology
-The data used in this project was provided by the professors and is avalaible at [DataSci4Health at Github](https://github.com/datasci4health/home). Such data was extracted from [Synthea](https://synthea.mitre.org), which is a synthetic health data generator. The tables provided at the DataSci4Health page is divided into four different scenarios, from which two were used in this analysis.
+Professors provided the data used in this project through [DataSci4Health on Github](https://github.com/datasci4health/home). In addition, such data was extracted from [Synthea](https://synthea.mitre.org), a synthetic health data generator. The tables provided on the DataSci4Health page are divided into four different scenarios, of which two were used in this analysis.
 
 We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
@@ -197,7 +197,7 @@ At this point, we were already convinced the model was a total failure, and the 
 #### Trial 2
 `input: Patient-Drugs.csv`
 
-With the previous experience in hand, we decided to add more variables so we could search for more complex interactions. The model developed for this scenario also needed to be more complex in the sense of robustness.
+With the previous experience in hand, we decided to add more variables so we could search for more complex interactions. As a result, the model developed for this scenario also needed to be more complex in robustness.
 
 The variables added for analysis were:
 - Unhealthy Alcohol Drinking
