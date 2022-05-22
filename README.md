@@ -153,7 +153,7 @@ We also decided to drop the `Neural Network` moving forward due to the time requ
 
 The following ROC Curve (we are aware that this is not an actual curve) is not good. At all.
 
-![](https://i.imgur.com/t2vOswY.png)
+<img width="600" alt="roc-1st" src="https://user-images.githubusercontent.com/54454569/169718522-1c2b6be3-6de4-4527-9a10-03c9bfadfe1b.png">
 
 
 ##### Confusion Matrix
@@ -217,7 +217,8 @@ Literature did not recommend a manual selection of the number of components. Ins
 
 For this trial, we had to settle for 94% of explained variance to achieve the number of 9 components. Anything equal and beyond 95% would increase the number of components to 10, which did not sound right.
 
-![](https://i.imgur.com/Kzc8zNW.png)
+<img width="600" alt="pca-2" src="https://user-images.githubusercontent.com/54454569/169718528-17e63118-ceb7-4d8f-9379-0d32e5d435b2.png">
+
 
 Despite the results being remarkably good, we again felt this might have been a confirmation bias, which served as the rationale for the third trial to this first scenario.
 
@@ -232,7 +233,7 @@ Even though this might have been the optimal model, we were not feeling confiden
 
 Going from 50/50 chances to a 95% did not sound plausible, even though the `ROC Curve` is now actually a curve.
 
-![](https://i.imgur.com/ZclLh3u.png)
+<img width="600" alt="roc-2" src="https://user-images.githubusercontent.com/54454569/169718535-61fde6be-df41-49b6-b7aa-47fff2361e79.png">
 
 Reassessing the model made us realize that all those positive results came from the `prognostic` being among the features and not set as a target.
 
@@ -258,7 +259,7 @@ Since all data was tainted with wrong inputs, additional analysis of the Matrixe
 #### Regression Model
 The following `Scatter Plot` is a soul representation of how mistakes can taint an evaluation:
 
-![](https://i.imgur.com/mmy7O3L.jpg)
+<img width="600" alt="scatter-2" src="https://user-images.githubusercontent.com/54454569/169718555-e52b29be-9411-480f-88cb-ec650123345d.png">
 
 If it were not for our suspicion, we could have assumed this model was an evident success. Being aware of the statistical behaviors and second guess results when they seemed too promising led us to the third and final trial.
 
@@ -281,14 +282,12 @@ This model underperformed when compared to the previous. Nonetheless, the result
 
 The Neural Network's ROC Curve delivered us from the fear of not achieving a satisfactory statistical foundation while being feasible within parameters discussed with our peers.
 
-![](https://i.imgur.com/SLW5LFw.png)
-
+<img width="600" alt="roc-3" src="https://user-images.githubusercontent.com/54454569/169718566-1cb48a94-c637-4faa-9dd3-1989f336c334.png">
 
 #### PCA
 We opted for 98% of `Explained Variance`, which resulted in 9 components that we will further analyze and refer to as analysis inputs.
 
-![](https://i.imgur.com/fmgeLiY.png)
-
+<img width="600" alt="pca-3" src="https://user-images.githubusercontent.com/54454569/169718571-bf1f6b69-6b55-4c4a-8818-87d270b5c221.png">
 
 ##### Confusion Matrix
 Even though the confusion matrixes were far from excellent, they showed precision good enough to move on with this model without significant compromise.
