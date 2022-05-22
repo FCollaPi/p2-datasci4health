@@ -63,9 +63,31 @@ In this context, we used the following parameters:
 
 We decided to deal with the scenarios incrementally. So, we approached the first scenario before moving on to the second, following the established framework.
 
-More on the procedures for each scenario:
+### 2nd Scenario
+> TO-DO
+
+### Used Bases
+We exclusively used the given bases as follows:
+
+-   Scenario01
+-   Scenario02
+
+No other base of reference was required, nor were the extended bases provided.
+
+## Project Evolution & Obtained Results
+We have been gathering results since the modeling part of the proposed problem. They pointed the direction toward our goal and helped us evolve the models in an intricate way to how they performed.
+
+We had a `classification model` for assessing data related to death status (where 0 is for alive and 1 for dead) and a `regression model` targeting prognostics to evaluate how long it would take for a patient in the given scenario to die.
+
+Since the development process evolved, we will discuss the changes over time for each trial:
 
 ### 1st Scenario
+As previously stated, the first scenario tackled mental health issues and their relation to death. However, mental health thinned down to Depression Screening relatively soon since the available data was not granular enough.
+
+This scenario was also our first approach. However, unfortunately, we had to drop this attempt due to the lack of statistical relevance.
+
+We added more interest variables and the `Principal Component Analysis` to enhance the likelihood of assembling a more robust model from the second trial on.
+
 On Jupyter, we iterated through the available CSVs using SQL queries to understand the tendencies and create other tables that we could export and use on Orange, as recommended by the professors.
 
 Intuitively, on the first run, we created tables from the following relations:
@@ -73,7 +95,7 @@ Intuitively, on the first run, we created tables from the following relations:
 -   Patient-Procedure
 -   Patient-Condition
 
-Once we assessed those tables from the depression screening standpoint and realized they were not enough, we added up more, so we ended with the following tables constrained on a timeframe:
+Once we assessed those tables from the `depression screening` standpoint and realized they were not enough, we added up more, so we ended with the following tables constrained on a timeframe:
 
 |                            |  Trial 1 | Trial 2 | Trial 3 | 
 | :------------------------: | :------: | :-----: | :-----: |
@@ -107,28 +129,20 @@ As for the parameters, this is the timeframe in which they took place within our
 | Reports of Violence        |          |         |     •   |
 | Partner Abuse              |          |         |     •   |
 
-### 2nd Scenario
-> TO-DO
-
-### Used Bases
-We exclusively used the given bases as follows:
-
--   Scenario01
--   Scenario02
-
-No other base of reference was required, nor were the extended bases provided.
-
-## Obtained Results
-> TO-DO
-### 1st Scenario
->TO-DO
-
 #### Trial 1
-input: depressive.csv
->TO-DO
+`input: depressive.csv`
 
-#### Targeting Death
->TO-DO
+For this first trial, we used the following parameters:
+- Severe Anxiety
+- Stress
+- Major Depression
+
+
+The results proved the data were not promising, which made us add more symptoms to strive for better success since the `Area Under Curve` was barely the same as a coin toss.
+
+Due to the lack of a significant `Area Under Curve`, we opted not to deepen our analysis on this trial. Nevertheless, we gathered all results.
+
+#### Classification Model
 
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
 | :------------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
@@ -136,8 +150,11 @@ input: depressive.csv
 | Neural Network       |  0.574  |  0.873  |  0.830  |   0.889   |  0.873  |
 | Logistic Regression  |  0.500  |  0.850  |  0.782  |   0.723   |  0.850  |
 
+The tree results were not feasible and made us realize we used the dead status as one of the analyzed variables instead of targeting it.
+
+We also decided to drop the `Tree Model` moving forward.
+
 ![](https://i.imgur.com/t2vOswY.png)
->TO-DO
 
 
 ##### Confusion Matrix
@@ -147,7 +164,6 @@ input: depressive.csv
 |   0  | 1990 |  0   | 1990 |
 |   1  |  350 |  0   | 350  |
 |   Σ  | 2340 |  0   | 2340 |
->TO-DO
 
 ######  Neural Network
 |   0  |   0  |   1  |   Σ  |
@@ -155,7 +171,6 @@ input: depressive.csv
 |   0  | 1990 |  0   | 1990 |
 |   1  |  298 |  52  | 350  |
 |   Σ  | 2288 |  52  | 2340 |
->TO-DO
 
 ######  Logistic Regression
 |   0  |   0  |   1  |   Σ  |
@@ -163,10 +178,8 @@ input: depressive.csv
 |   0  | 1990 |  0   | 1990 |
 |   1  |    0 |  350 | 350  |
 |   Σ  | 1990 |  350 | 2340 |
->TO-DO
 
-#### Targeting Prognostic
->TO-DO
+#### Regression Model
 
 |          Model       |          MSE           |      RMSE     |      MAE      |   R2  |
 | :------------------: | :--------------------: | :-----------: | :-----------: | :---: |
@@ -174,52 +187,54 @@ input: depressive.csv
 
 
 #### Trial 2
-input: Patient-Drugs.csv
+`input: Patient-Drugs.csv`
 >TO-DO
 
-#### Targeting Death
+#### Classification Model
 >TO-DO
-
-|          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
-| :------------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
-| Neural Network       |  0.953  |  0.970  |  0.969  |   0.970   |  0.970  |
-| Logistic Regression  |  0.956  |  0.940  |  0.939  |   0.940   |  0.940  |
-
-![](https://i.imgur.com/mmy7O3L.jpg)
-
-> TO-DO
 
 ##### PCA
 ![](https://i.imgur.com/Kzc8zNW.png)
 
+|         Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
+| :-----------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
+| Tree                |  0.953  |  0.970  |  0.969  |   0.970   |  0.970  |
+| Logistic Regression |  0.956  |  0.940  |  0.939  |   0.940   |  0.940  |
+
 >TO-DO
+
+![](https://i.imgur.com/ZclLh3u.png)
+
 
 ##### Confusion Matrix
->TO-DO
-
-######  Logistic Regression
-|   0  |   0  |   1  |   Σ  |
-| ---: | ---: | ---: | ---: |
-|   0  | 1990 |  0   | 1990 |
-|   1  |    0 |  350 | 350  |
-|   Σ  | 1990 |  350 | 2340 |
 >TO-DO
 
 ######  Tree
 |   0  |   0   |   1   |    Σ   |
 | ---: | ----: | ----: | -----: |
-|   0  | 88437 |  1833 | 90270  |
-|   1  | 5271  | 23049 | 28320  |
-|   Σ  | 2340  | 24882 | 118590 |
+|   0  | 89710 |  560  | 90270  |
+|   1  | 3034  | 25286 | 28320  |
+|   Σ  | 92744 | 25846 | 118590 |
 >TO-DO
 
-#### Targeting Prognostic
+######  Logistic Regression
+|   0  |   0   |   1   |    Σ   |
+| ---: | ----: | ----: | -----: |
+|   0  | 88437 |  1833 | 90270  |
+|   1  | 5271  | 23049 | 28320  |
+|   Σ  | 93708 | 24882 | 118590 |
+>TO-DO
+
+#### Regression Model
+>TO-DO
+
+![](https://i.imgur.com/mmy7O3L.jpg)
 
 #### Trial 3
 input: Patient-Drugs.csv
 >TO-DO
 
-#### Targeting Death
+#### Classification Model
 >TO-DO
 
 |          Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
@@ -239,7 +254,7 @@ input: Patient-Drugs.csv
 ##### Confusion Matrix
 >TO-DO
 
-######  Logistic Regression
+######  Regression Model
 |   0  |    0   |    1   |    Σ   |
 | ---: | -----: | -----: | -----: |
 |   0  | 87645  |  2616  | 90270  |
