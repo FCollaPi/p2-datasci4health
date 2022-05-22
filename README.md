@@ -312,15 +312,10 @@ input: Patient-Drugs.csv
 #### Trial 1
 > TO-DO
 
-
-
-## Expansion
-> TO-DO
-
 ## Discussion
 > TO-DO
 
-## Reasoning
+## Wrap-Up
 > TO-DO
 
 ## References
