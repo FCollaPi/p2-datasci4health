@@ -1,10 +1,13 @@
+'''
+Script for building table containing patient and drug/stress related data.
+'''
 import argparse
 import pandas as pd
 import os
 import numpy as np
 from sqlite3 import connect
 
-parser = argparse.ArgumentParser(description='Build scenario')
+parser = argparse.ArgumentParser(description='Build table containing patient and drug/stress related data from a specified scenario')
 parser.add_argument('SCENARIO', choices=['1','2'], help='Build features from this scenario')
 args = parser.parse_args()
 
