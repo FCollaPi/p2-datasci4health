@@ -328,12 +328,16 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 
 #### 2nd Scenario
 > TODO
-
 ## Discussion
-As promising as the model looked, we cannot make any further assumptions about its results.
+As promising as the model looked, we cannot make further assumptions about its results.
 
 Reasons could go from the sample size to the technical decision-making limitations regarding this domain. We found that intuitiveness does not always lead us to the right places when making sense of large chunks of data.
 
+We are also aware that our approach could add noise to the whole process. So from one scenario standpoint, this trial-basis data gathering might not have been the best solution.
+
+If we were to start over, we probably would have tested the model on several scenarios before settling on what we believed was the better model.
+
+The differences in scenario data play a substantial role in providing outcomes we could assess.
 >TODO
 
 ## Conclusion
@@ -344,6 +348,8 @@ Making assumptions, taking risks of having to redo work, and making decisions ar
 We also learned new concepts while revisiting subjects. Orange, markdown, and understanding the minutia of data analysis are the three more significant lessons we could list.
 
 If time or concurrent workload were not such strong constraints, we could have visited the medical literature more often to find strong relations between subjects of our interest.
+
+In that same fashion, we would have been more cautious when developing a scenario-based model to avoid scenario-biasing.
 
 ## References
 - https://pubmed.ncbi.nlm.nih.gov/30914444/
