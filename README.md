@@ -216,7 +216,7 @@ For this trial, we had to settle for 94% of explained variance to achieve the nu
 
 Despite the results being remarkably good, we again felt this might have been a confirmation bias, which served as the rationale for the third trial to this first scenario.
 
-Nonetheless, we did a detailed results analysis to evolve the model better.
+Nonetheless, we did a detailed results analysis to better evolve the model.
 
 |         Model       |   AUC   |    CA   |    F1   | Precision |  Recall |
 | :-----------------: | :-----: | :-----: | :-----: | :-------: | :-----: |
