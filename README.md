@@ -37,7 +37,7 @@ We used the same toolset as the one presented during classes, which consisted on
 4. Orange
 
 ## Methodology
-Professors provided the data used in this project through [DataSci4Health on GitHub](https://github.com/datasci4health/home) in 4 different scenarios, two of each we ended up using in this analysis. In addition, we extracted data from [Synthea](https://synthea.mitre.org), a synthetic health data generator.
+Professors extracted data from [Synthea](https://synthea.mitre.org), a synthetic health data generator. Then, they provided it through [DataSci4Health on GitHub](https://github.com/datasci4health/home), separated into four different scenarios, two of each we ended up using for this analysis.
 
 We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
@@ -149,12 +149,12 @@ The tree results were not feasible and made us realize we used the dead status a
 
 We also decided to drop the `Neural Network` moving forward due to the time required to obtain results.
 
-The following ROC Curve (we are aware that this is not an actual curve) is not good. At all.
+The following ROC Curves illustrate the results shown in the Classification Table. It is visible that the tree curve (in purple) is not realistic, and the other curves (Neural Network in orange and Logistic Regression in green) are not good at all, being close to a purely random classifier.
 
 <img width="650" alt="roc-1st" src="https://user-images.githubusercontent.com/54454569/169718522-1c2b6be3-6de4-4527-9a10-03c9bfadfe1b.png">
 
 ##### Confusion Matrix
-The `Confusion Matrix` results also clearly converged to a mistake in some settings chosen thus far.
+The `Confusion Matrix` also results in the convergence of a mistake in the chosen settings thus far.
 
 In a similar fashion, the total absence of false positives for all the matrixes in the first trial was alone a motive to raise suspicion.
 
@@ -182,6 +182,8 @@ In a similar fashion, the total absence of false positives for all the matrixes 
 #### Regression Model
 At this point, we were already convinced the model was a total failure, and the R2 results for the `Linear Regression` did not led us otherwise.
 
+The values in the following table consider the prognostic in days:
+
 |          Model       |          MSE           |      RMSE     |      MAE      |   R2  |
 | :------------------: | :--------------------: | :-----------: | :-----------: | :---: |
 | Linear Regression    | 343035556174557248.000 | 585692373.328 | 334186392.087 | 0.192 |
@@ -203,12 +205,12 @@ Halfway through the modeling, during discussions, we felt the urge to add a few 
 #### Classification Model
 The PCA was a new addition to the analysis, which we had not included in the previous trial. In addition, the setup of the PCA required extra literature reading since we were not super confident about the relation between the number of components and the explained variance.
 
-Besides that, correcting the fault mentioned above (of not targeting the correct variable) enhanced the results immensely.
+Besides that, correcting the fault mentioned above (not including the targeted variable as a parameter) enhanced the results immensely.
 
 ##### PCA
 Literature did not recommend a manual selection of the number of components. Instead, picking an `Explained Variance` between 95-99% was the preferred way of setting up the PCA across the board.
 
-For this trial, we had to settle for 94% of explained variance to achieve the number of 9 components. Anything equal and beyond 95% would increase the number of components to 10, which did not sound right.
+For this trial, we had to settle for 94% of explained variance to achieve the number of 9 components. Anything equal to or greater than 95% would increase the number of components to 10, not affecting it since it is precisely the number of parameters used.
 
 <img width="650" alt="pca-2" src="https://user-images.githubusercontent.com/54454569/169718528-17e63118-ceb7-4d8f-9379-0d32e5d435b2.png">
 
@@ -317,7 +319,7 @@ In order to deeply understand how the small R2 influenced our model, we decided 
 ##### Worst-Performing Component
 <img width="1000" alt="wcs" src="https://user-images.githubusercontent.com/54454569/169719327-907f0b89-1226-4d87-8733-d11ed5b06f7d.png">
 
-As shown, the variation between the best-performer and worst-performer is slight to none, and we were not able to find a correlation between those components and the target, which was prognostic of death.
+As shown by the R2 metric, the variation between the best-performer and worst-performer is slight to none, and we were not able to find a correlation between those components and the target, which was prognostic of death.
 
 The results, albeit unsatisfying, elicited a very complex decision-making process involving constant back-and-forth.
 
