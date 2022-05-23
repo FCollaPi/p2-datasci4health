@@ -35,7 +35,7 @@ drug_conds_df = conds_df.sort_values(by='START').groupby('PATIENT').aggregate({
     'OPIOID': lambda x: np.sum(x)>0,
     'ALCOHOL': lambda x: np.sum(x)>0,
     'MISUSE': lambda x: np.sum(x)>0,
-    'OVERDOSE': lambda x: np.sum(x),
+    'OVERDOSE': 'sum',
     'TOBACCO': lambda x: np.sum(x)>0,
     'VIOLENCE': 'sum',
     'PARTNER': 'sum',
