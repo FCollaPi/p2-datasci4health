@@ -72,7 +72,7 @@ We exclusively used the given bases as follows:
 
 No other base of reference was required, nor were the extended bases provided.
 
-## Project Evolution & Obtained Results
+## Project Evolution
 We have been gathering results since the modeling part of the proposed problem. They pointed the direction toward our goal and helped us evolve the models in an intricate way to how they performed.
 
 We had a `classification model` for assessing data related to death status (where 0 is for alive and 1 for dead) and a `regression model` targeting prognostics to evaluate how long it would take for a patient in the given scenario to die.
@@ -321,13 +321,14 @@ As shown, the variation between the best-performer and worst-performer is slight
 
 The results, albeit unsatisfying, elicited a very complex decision-making process involving constant back-and-forth.
 
-### Results
+## Obtained Results
 
-#### 1st Scenario
+### Training on Scenario 1 and Testing on Scenario 2
 >TODO
 
-#### 2nd Scenario
+### Training on Scenario 2 and Testing on Scenario 1
 > TODO
+
 ## Discussion
 As promising as the model looked, we cannot make further assumptions about its results.
 
