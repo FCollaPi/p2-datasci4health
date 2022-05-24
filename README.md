@@ -62,7 +62,6 @@ In this context, we used the following parameters, as labeled in the Conditions 
 -   Reports of Violence in the Environment
 -   Victim of Intimate Partner Abuse
 
-We built our models using data from the first scenario and then moved on to the second scenario after gathering enough tangible results.
 
 ### Used Bases
 We exclusively used the given bases as follows:
@@ -214,7 +213,7 @@ For this trial, we had to settle for 94% of explained variance to achieve the nu
 
 <img width="650" alt="pca-2" src="https://user-images.githubusercontent.com/54454569/169718528-17e63118-ceb7-4d8f-9379-0d32e5d435b2.png">
 
-Despite the results being remarkably good, we again felt this might have been a confirmation bias, which served as the rationale for the third trial to this first scenario.
+Despite the results being remarkably good, we again felt this might have been a confirmation bias, which served as the rationale for the subsequent trial.
 
 Nonetheless, we did a detailed results analysis to better evolve the model.
 
@@ -396,7 +395,7 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 <img width="650" alt="reg-pt" src="https://user-images.githubusercontent.com/54454569/170141488-83f4713d-f124-4bfd-8486-bb832c777566.png">
 
 
-### Training on Scenario 2, Testion on Scenario 1
+### Training on Scenario 2, Testing on Scenario 1
 >TODO
 
 #### Classification
