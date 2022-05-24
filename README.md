@@ -224,7 +224,7 @@ Nonetheless, we did a detailed results analysis to better evolve the model.
 
 Even though this might have been the optimal model, we were not feeling confident due to the behemoth jump between the first and second attempts.
 
-Going from 50/50 chances to a 95% did not sound plausible, even though the `ROC Curve` is now actually a curve.
+Going from 50/50 chances to a 95% did not sound plausible, even though both `ROC Curves` are now actually a curve (Tree in green and LR in orange).
 
 <img width="650" alt="roc-2" src="https://user-images.githubusercontent.com/54454569/169718535-61fde6be-df41-49b6-b7aa-47fff2361e79.png">
 
@@ -273,7 +273,7 @@ This model underperformed when compared to the previous. Nonetheless, the result
 | Decision Tree        |  0.860  |  0.867  |  0.849  |   0.877   |  0.867  |
 | Logistic Regression  |  0.667  |  0.817  |  0.787  |   0.811   |  0.817  |
 
-The Neural Network's ROC Curve delivered us from the fear of not achieving a satisfactory statistical foundation while being feasible within parameters discussed with our peers.
+The Decision Tree's ROC Curve (in green) delivered us from the fear of not achieving a satisfactory statistical foundation while being feasible within parameters discussed with our peers.
 
 <img width="650" alt="roc-3" src="https://user-images.githubusercontent.com/54454569/169718566-1cb48a94-c637-4faa-9dd3-1989f336c334.png">
 
