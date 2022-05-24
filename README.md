@@ -324,12 +324,144 @@ As shown by the R2 metric, the variation between the best-performer and worst-pe
 The results, albeit unsatisfying, elicited a very complex decision-making process involving constant back-and-forth.
 
 ## Obtained Results
-
-### Training on Scenario 1 and Testing on Scenario 2
 >TODO
 
-### Training on Scenario 2 and Testing on Scenario 1
-> TODO
+### Training on Scenario 1, Testing on Scenario 2
+>TODO
+
+#### Classification
+>TODO
+
+|          Model               |  AUC  |   CA  |   F1  | Precision | Recall |
+| :--------------------------: | :---: | :---: | :---: | :-------: | :----: |
+| Logistic Regression          | 0.667 | 0.817 | 0.787 |   0.811   | 0.817  |
+| Classification Decision Tree | 0.860 | 0.867 | 0.849 |   0.877   | 0.867  |
+
+<img width="650" alt="class-g-roc" src="https://user-images.githubusercontent.com/54454569/170140564-d08b3f0c-a906-420f-931a-05ade1102b15.png">
+
+
+##### Confusion Matrix
+>TODO
+
+###### Logistic Regression
+>TODO
+
+|   0  |    0   |    1   |    Σ   |
+| :--: | :----: | :----: | :----: |
+|   0  | 87654  |  2616  | 90270  |
+|   1  | 19057  |  9263  | 28320  |
+|   Σ  | 106711 |  11879 | 118590 |
+
+###### Classification Decision Tree
+>TODO
+
+|   0  |    0   |    1   |    Σ   |
+| :--: | :----: | :----: | :----: |
+|   0  | 89434  |  836   | 90270  |
+|   1  | 14961  |  13359 | 28320  |
+|   Σ  | 104395 |  14195 | 118590 |
+
+##### Pythagoeran Tree
+>TODO
+
+<img width="650" alt="class-g-pt" src="https://user-images.githubusercontent.com/54454569/170140607-e4694961-96dd-4f7b-9d06-76606488a0af.png">
+
+##### Predictions
+>TODO
+
+<img width="650" alt="class-pred-roc" src="https://user-images.githubusercontent.com/54454569/170140675-dd9d5827-2740-4bc1-a612-c4c63b83f5e8.png">
+
+
+###### Classification Decision Tree
+>TODO
+
+|   0  |    0   |    1   |    Σ   |
+| :--: | :----: | :----: | :----: |
+|   0  | 11744  |   6016 | 47760  |
+|   1  |   676  |    723 |  7449  |
+|   Σ  | 48470  |   6739 | 55209  |
+
+#### Regression
+>TODO
+
+|            Model         |     MSE     |    RMSE  |   MAE    |  R2   |
+| :----------------------: | :---------: | :------: | :------: | :---: |
+| Regression Decision Tree | 7936089.717 | 2817.107 | 1268.487 | 0.175 |
+| Linear Regression        | 9272105.390 | 2045.177 | 1514.036 | 0.037 |
+
+>TODO
+
+<img width="1000" alt="reg-scatter" src="https://user-images.githubusercontent.com/54454569/170140952-1dfb74ba-7016-43ab-80b1-63823ceece15.png">
+
+<img width="650" alt="reg-pt" src="https://user-images.githubusercontent.com/54454569/170141488-83f4713d-f124-4bfd-8486-bb832c777566.png">
+
+
+### Training on Scenario 2, Testion on Scenario 1
+>TODO
+
+#### Classification
+|          Model               |  AUC  |   CA  |   F1  | Precision | Recall |
+| :--------------------------: | :---: | :---: | :---: | :-------: | :----: |
+| Logistic Regression          | 0.599 | 0.863 | 0.810 |   0.807   | 0.863  |
+| Classification Decision Tree | 0.835 | 0.891 | 0.859 |   0.896   | 0.891  |
+
+<img width="650" alt="class-g-roc" src="https://user-images.githubusercontent.com/54454569/170141020-6076e760-bc36-436d-a800-f8cb1ccbaa7c.png">
+
+##### Confusion Matrix
+>TODO
+
+###### Logistic Regression
+>TODO
+
+|   0  |    0   |    1   |    Σ   |
+| :--: | :----: | :----: | :----: |
+|   0  | 94822  |  698   | 95520  |
+|   1  | 14403  |  197   | 14900  |
+|   Σ  | 107108 |  3312  | 110420 |
+
+###### Classification Decision Tree
+>TODO
+
+|   0  |    0   |    1   |    Σ   |
+| :--: | :----: | :----: | :----: |
+|   0  | 95297  |  223   | 95520  |
+|   1  | 11811  |  3089  | 14900  |
+|   Σ  | 107108 |  3312  | 110420 |
+
+##### Pythagorean Tree
+>TODO
+
+<img width="650" alt="class-g-pt" src="https://user-images.githubusercontent.com/54454569/170141047-1a2378de-1db8-4343-9c4f-4afea247fbb2.png">
+
+
+##### Predictions
+>TODO
+
+<img width="650" alt="class-pred-roc" src="https://user-images.githubusercontent.com/54454569/170141086-516b8cf6-91c3-44ce-91df-937e7aac287e.png">
+
+###### Classification Decision Tree
+>TODO
+
+|   0  |    0   |    1   |    Σ   |
+| :--: | :----: | :----: | :----: |
+|   0  | 14364  |  769   | 45133  |
+|   1  | 13922  |  239   | 14161  |
+|   Σ  | 58286  |  1008  | 59294  |
+
+#### Regression
+>TODO
+
+|            Model         |     MSE     |    RMSE  |   MAE    |  R2   |
+| :----------------------: | :---------: | :------: | :------: | :---: |
+| Regression Decision Tree | 5963447.249 | 2442.017 | 882.248  | 0.134 |
+| Linear Regression        | 6810200.055 | 2611.206 | 1062.678 | 0.010 |
+
+
+>TODO
+
+<img width="1000" alt="reg-scatter" src="https://user-images.githubusercontent.com/54454569/170141180-38fd4c60-a720-41ee-a642-f614d46e228f.png">
+
+<img width="650" alt="reg-pt" src="https://user-images.githubusercontent.com/54454569/170141207-09a06d61-1387-48cb-ba19-2bcab0f9c487.png">
 
 ## Discussion
 As promising as the model looked, we cannot make further assumptions about its results.
