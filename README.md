@@ -372,6 +372,7 @@ We opted for the `Pythagorean Tree` view for intelligibility and visualization p
 
 ##### Predictions
 The `ROC Curve` of our `Classification Decision Tree` presented a 50/50 chance of getting it right, once again being close to a purely random classifier.
+
 <img width="650" alt="class-pred-roc" src="https://user-images.githubusercontent.com/54454569/170140675-dd9d5827-2740-4bc1-a612-c4c63b83f5e8.png">
 
 
