@@ -37,7 +37,7 @@ We used the same toolset as the one presented during classes, which consisted on
 4. Orange
 
 ## Methodology
-Professors extracted data from [Synthea](https://synthea.mitre.org), a synthetic health data generator. Then, they provided it through [DataSci4Health on GitHub](https://github.com/datasci4health/home), separated into four different scenarios, two of each we ended up using for this analysis.
+Professors extracted data from [Synthea](https://synthea.mitre.org), a synthetic health data generator. Then, they provided it through [Lab2Learn on GitHub](https://github.com/santanche/lab2learn), separated into four different scenarios, two of each we ended up using for this analysis.
 
 We went through the tables to understand the available data during the preliminary analysis. Then, with that in hand, we had a brief discussion to shepherd our decisions moving forward - and we achieved a consensus that mental health awareness should serve as the foundation for our analysis.
 
@@ -64,8 +64,7 @@ In this context, we used the following parameters, as labeled in the Conditions 
 
 
 ### Used Bases
-We exclusively used the given bases as follows:
-
+We exclusively used the given bases from the provided data as follows:
 -   Scenario01
 -   Scenario02
 
@@ -157,6 +156,8 @@ The `Confusion Matrix` also results in the convergence of a mistake in the chose
 
 In a similar fashion, the total absence of false positives for all the matrixes in the first trial was alone a motive to raise suspicion.
 
+The value 0 represents not dead (no death date is present in the Patients table) and 1 represents dead.
+
 ######  Tree
 |   0  |   0  |   1  |   Σ  |
 | ---: | ---: | ---: | ---: |
@@ -181,7 +182,9 @@ In a similar fashion, the total absence of false positives for all the matrixes 
 #### Regression Model
 At this point, we were already convinced the model was a total failure, and the R2 results for the `Linear Regression` did not led us otherwise.
 
-The values in the following table consider the prognostic in days:
+The `prognostic` target value used is calculated by subtracting the deathdate and the last encounter start date and scaling the result to days of each patient that has a registered death date, and -1 otherwise.
+
+The values in the following table consider the prognostic in days, for the reason explained above.
 
 |          Model       |          MSE           |      RMSE     |      MAE      |   R2  |
 | :------------------: | :--------------------: | :-----------: | :-----------: | :---: |
@@ -207,6 +210,8 @@ The PCA was a new addition to the analysis, which we had not included in the pre
 Besides that, correcting the fault mentioned above (not including the targeted variable as a parameter) enhanced the results immensely.
 
 ##### PCA
+Principal Component Analysis (or PCA) consists of a technique to reduce the dimensionality of a set of variables by transforming them into a reduced set of orthogonal variables in a new space, therefore eliminating their linear dependency.
+
 Literature did not recommend a manual selection of the number of components. Instead, picking an `Explained Variance` between 95-99% was the preferred way of setting up the PCA across the board.
 
 For this trial, we had to settle for 94% of explained variance to achieve the number of 9 components. Anything equal to or greater than 95% would increase the number of components to 10, not affecting it since it is precisely the number of parameters used.
@@ -250,11 +255,11 @@ Since all data was tainted with wrong inputs, additional analysis of the Matrixe
 |   Σ  | 93708 | 24882 | 118590 |
 
 #### Regression Model
-The following `Scatter Plot` is a soul representation of how mistakes can taint an evaluation:
+The following `Scatter Plot` is a soul representation of how mistakes can taint an evaluation. It presents the target value for the regression model (`prognostic`) in function of the 9th component extracted from the PCA. 
 
 <img width="1000" alt="scatter-2" src="https://user-images.githubusercontent.com/54454569/169718555-e52b29be-9411-480f-88cb-ec650123345d.png">
 
-If it were not for our suspicion, we could have assumed this model was an evident success. Being aware of the statistical behaviors and second guess results when they seemed too promising led us to the third and final trial.
+The perfect - aside from the multiple - linear relation between the variables lead us to think the `prognostic` was being used as variable for the PCA model. If it were not for our suspicion, we could have assumed this model was an evident success. Being aware of the statistical behaviors and second guess results when they seemed too promising led us to the third and final trial.
 
 #### Trial 3
 input: Patient-Drugs.csv
@@ -309,13 +314,15 @@ So we decided to stick to it since the process that led us here was enriching it
 | Regression Tree      | 7936089.717 | 2817.107 | 1268.487 | 0.175 |
 | Linear Regression    | 9273105.390 | 3045.177 | 1514.036 | 0.037 |
 
+The Root Mean Square error for the Regression Tree model is within 7.8 years, which may be feasible for some health conditions. Even so, this result is not precisely reliable, as the following sections show.
+
 In order to deeply understand how the small R2 influenced our model, we decided to compare the best and worst-performing components against each other:
 
-##### Best-Performing Component
+##### Best-Performing Component (1st PCA Component)
 <img width="1000" alt="bcs" src="https://user-images.githubusercontent.com/54454569/169719312-205eddec-8dc2-4e69-998f-41ea1c3f698a.png">
 
 
-##### Worst-Performing Component
+##### Worst-Performing Component (6th PCA component)
 <img width="1000" alt="wcs" src="https://user-images.githubusercontent.com/54454569/169719327-907f0b89-1226-4d87-8733-d11ed5b06f7d.png">
 
 As shown by the R2 metric, the variation between the best-performer and worst-performer is slight to none, and we were not able to find a correlation between those components and the target, which was prognostic of death.
@@ -324,9 +331,10 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 
 ## Obtained Results
 Attempting to mitigate overfitting made us approach those models incrementally, and even so, we could not reach meaningful results from cross-using the models.
+The script that generates the tables with the variables used for each scenario can be found [here](https://github.com/FCollaPi/p2-datasci4health/blob/main/src/features/build_patients_drugs.py). It is worth to mention that the CSV paths saved are absolute, so it may be necessary to change the paths to the correct ones (that can also be found [here](https://github.com/FCollaPi/p2-datasci4health/blob/main/data/interim/scenario1/patient-drugs.csv) and [here](https://github.com/FCollaPi/p2-datasci4health/blob/main/data/interim/scenario2/patient-drugs.csv)) when reproducing the following tests.
 
 ### Training on Scenario 1, Testing on Scenario 2
-We decided to report results segregated by classification and regression since each of those sessions could have its hindrances. 
+We decided to report results segregated by classification and regression since each of those sessions could have its hindrances. [This Orange file](https://github.com/FCollaPi/p2-datasci4health/blob/main/notebooks/1.0-train-scenario1-test-scenario-2.ows) was used to train and test the mentioned scenarios.
 
 #### Classification
 The scoring below shows a slightly ok `Logistic Regression` AUC and a promising Classification Decision Tree AUC. However, that hope falls short since CDTs are not reliable as training models due to being very sensitive to data and tend to present higher variance.
@@ -358,7 +366,7 @@ The `ROC Curves` confirms the previous table, with orange representing the LR an
 |   Σ  | 104395 |  14195 | 118590 |
 
 ##### Pythagoeran Tree
-We opted for the `Pythagorean Tree` view for intelligibility and visualization purposes instead of the traditional tree view. Since the number of people labeled as dead is comprehensive low and our models are not very reliable, the tendency to more `alive` nodes met expectations.
+We opted for the `Pythagorean Tree` view for intelligibility and visualization purposes instead of the traditional tree view. Since the number of people labeled as dead is comprehensive low and our models are not very reliable, the tendency to more `alive` (0) nodes met expectations.
 
 <img width="650" alt="class-g-pt" src="https://user-images.githubusercontent.com/54454569/170140607-e4694961-96dd-4f7b-9d06-76606488a0af.png">
 
@@ -394,7 +402,7 @@ This Scatter Plot's behavior and the Pythagorean Tree View are two strong indica
 
 
 ### Training on Scenario 2, Testing on Scenario 1
-There is no loss in generalization from the last cross-use to this one. Results happened as already reported (and expected at this point).
+There is not loss in generalization from the last cross-use to this one. The file to reproduce this train and test set is [here](https://github.com/FCollaPi/p2-datasci4health/blob/main/notebooks/1.1-train-scenario2-test-scenario-1.ows). Results happened as already reported (and expected at this point).
 
 #### Classification
 |          Model               |  AUC  |   CA  |   F1  | Precision | Recall |
