@@ -323,27 +323,26 @@ As shown by the R2 metric, the variation between the best-performer and worst-pe
 The results, albeit unsatisfying, elicited a very complex decision-making process involving constant back-and-forth.
 
 ## Obtained Results
->TODO
+Attempting to mitigate overfitting made us approach those models incrementally, and even so, we could not reach meaningful results from cross-using the models.
 
 ### Training on Scenario 1, Testing on Scenario 2
->TODO
+We decided to report results segregated by classification and regression since each of those sessions could have its hindrances. 
 
 #### Classification
->TODO
+The scoring below shows a slightly ok `Logistic Regression` AUC and a promising Classification Decision Tree AUC. However, that hope falls short since CDTs are not reliable as training models due to being very sensitive to data and tend to present higher variance.
 
 |          Model               |  AUC  |   CA  |   F1  | Precision | Recall |
 | :--------------------------: | :---: | :---: | :---: | :-------: | :----: |
 | Logistic Regression          | 0.667 | 0.817 | 0.787 |   0.811   | 0.817  |
 | Classification Decision Tree | 0.860 | 0.867 | 0.849 |   0.877   | 0.867  |
 
+The `ROC Curves` confirms the previous table, with orange representing the LR and green the Decision Tree.
+
 <img width="650" alt="class-g-roc" src="https://user-images.githubusercontent.com/54454569/170140564-d08b3f0c-a906-420f-931a-05ade1102b15.png">
 
 
 ##### Confusion Matrix
->TODO
-
 ###### Logistic Regression
->TODO
 
 |   0  |    0   |    1   |    Σ   |
 | :--: | :----: | :----: | :----: |
@@ -352,8 +351,6 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 |   Σ  | 106711 |  11879 | 118590 |
 
 ###### Classification Decision Tree
->TODO
-
 |   0  |    0   |    1   |    Σ   |
 | :--: | :----: | :----: | :----: |
 |   0  | 89434  |  836   | 90270  |
@@ -361,13 +358,12 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 |   Σ  | 104395 |  14195 | 118590 |
 
 ##### Pythagoeran Tree
->TODO
+We opted for the `Pythagorean Tree` view for intelligibility and visualization purposes instead of the traditional tree view. Since the number of people labeled as dead is comprehensive low and our models are not very reliable, the tendency to more `alive` nodes met expectations.
 
 <img width="650" alt="class-g-pt" src="https://user-images.githubusercontent.com/54454569/170140607-e4694961-96dd-4f7b-9d06-76606488a0af.png">
 
 ##### Predictions
->TODO
-
+The `ROC Curve` of our `Classification Decision Tree` presented a 50/50 chance of getting it right, once again being close to a purely random classifier.
 <img width="650" alt="class-pred-roc" src="https://user-images.githubusercontent.com/54454569/170140675-dd9d5827-2740-4bc1-a612-c4c63b83f5e8.png">
 
 
@@ -381,14 +377,16 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 |   Σ  | 48470  |   6739 | 55209  |
 
 #### Regression
->TODO
+The low R2 scores once again confirm our model's untrustworthiness.
 
 |            Model         |     MSE     |    RMSE  |   MAE    |  R2   |
 | :----------------------: | :---------: | :------: | :------: | :---: |
 | Regression Decision Tree | 7936089.717 | 2817.107 | 1268.487 | 0.175 |
 | Linear Regression        | 9272105.390 | 2045.177 | 1514.036 | 0.037 |
 
->TODO
+We already know trees are less reliable, the difference in scores does not strike as a surprise, and we cannot infer much about it either.
+
+This Scatter Plot's behavior and the Pythagorean Tree View are two strong indications of underscoring.
 
 <img width="1000" alt="reg-scatter" src="https://user-images.githubusercontent.com/54454569/170140952-1dfb74ba-7016-43ab-80b1-63823ceece15.png">
 
@@ -396,7 +394,7 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 
 
 ### Training on Scenario 2, Testing on Scenario 1
->TODO
+There is no loss in generalization from the last cross-use to this one. Results happened as already reported (and expected at this point).
 
 #### Classification
 |          Model               |  AUC  |   CA  |   F1  | Precision | Recall |
@@ -407,11 +405,7 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 <img width="650" alt="class-g-roc" src="https://user-images.githubusercontent.com/54454569/170141020-6076e760-bc36-436d-a800-f8cb1ccbaa7c.png">
 
 ##### Confusion Matrix
->TODO
-
 ###### Logistic Regression
->TODO
-
 |   0  |    0   |    1   |    Σ   |
 | :--: | :----: | :----: | :----: |
 |   0  | 94822  |  698   | 95520  |
@@ -419,8 +413,6 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 |   Σ  | 107108 |  3312  | 110420 |
 
 ###### Classification Decision Tree
->TODO
-
 |   0  |    0   |    1   |    Σ   |
 | :--: | :----: | :----: | :----: |
 |   0  | 95297  |  223   | 95520  |
@@ -428,19 +420,14 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 |   Σ  | 107108 |  3312  | 110420 |
 
 ##### Pythagorean Tree
->TODO
-
 <img width="650" alt="class-g-pt" src="https://user-images.githubusercontent.com/54454569/170141047-1a2378de-1db8-4343-9c4f-4afea247fbb2.png">
 
-
 ##### Predictions
->TODO
+Our prediction for this cross-use actually underperformed the expected from a random generator.
 
 <img width="650" alt="class-pred-roc" src="https://user-images.githubusercontent.com/54454569/170141086-516b8cf6-91c3-44ce-91df-937e7aac287e.png">
 
 ###### Classification Decision Tree
->TODO
-
 |   0  |    0   |    1   |    Σ   |
 | :--: | :----: | :----: | :----: |
 |   0  | 14364  |  769   | 45133  |
@@ -448,15 +435,10 @@ The results, albeit unsatisfying, elicited a very complex decision-making proces
 |   Σ  | 58286  |  1008  | 59294  |
 
 #### Regression
->TODO
-
 |            Model         |     MSE     |    RMSE  |   MAE    |  R2   |
 | :----------------------: | :---------: | :------: | :------: | :---: |
 | Regression Decision Tree | 5963447.249 | 2442.017 | 882.248  | 0.134 |
 | Linear Regression        | 6810200.055 | 2611.206 | 1062.678 | 0.010 |
-
-
->TODO
 
 <img width="1000" alt="reg-scatter" src="https://user-images.githubusercontent.com/54454569/170141180-38fd4c60-a720-41ee-a642-f614d46e228f.png">
 
@@ -472,7 +454,13 @@ We are also aware that our approach could add noise to the whole process. So fro
 If we were to start over, we probably would have tested the model on several scenarios before settling on what we believed was the better model.
 
 The differences in scenario data play a substantial role in providing outcomes we could assess.
->TODO
+
+We could not only understand more concepts like overfitting and the consequences of trying to deal with it, but we also could see in practical use the real-life applications of algorithms and how they perform differently.
+
+In hindsight, we could draw a few significant conclusions from this whole process:
+- it is very wholesome not to stress with dealing with data and with the modeling not meeting expectations;
+- having the backup of a domain specialist plays a paramount role in assessing, developing, and validating a model;
+- understanding the algorithms and their best use cases can help avoid biases, such as relying on decision trees.
 
 ## Conclusion
 Although intense, this project allowed us to "go out on the wild" without leaving, quote-on-quote, the comfort of our fancy barn.
